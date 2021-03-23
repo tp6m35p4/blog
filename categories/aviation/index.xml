@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aviation on Yu-Cheng Chen&#39;s blog</title>
-    <link>https://yzchen.tw/categories/aviation/</link>
+    <link>https://blog.yzchen.tw/categories/aviation/</link>
     <description>Recent content in Aviation on Yu-Cheng Chen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yzchen.tw/categories/aviation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/categories/aviation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Type of Airspeed 空速的種類</title>
-      <link>https://yzchen.tw/p/airspeed/</link>
+      <link>https://blog.yzchen.tw/p/airspeed/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://yzchen.tw/p/airspeed/</guid>
+      <guid>https://blog.yzchen.tw/p/airspeed/</guid>
       <description>Type of Airspeed 空速的種類  V1, rotate, V2. Positive rate, gears up.
 上面這段話應該是所有航空人最熟悉的話了，當中V1是決斷速度，代表能夠放棄起飛的最大速度，也就是說當你超過這個速度，剩餘的跑道長度將不夠讓飛機安全停下，只能硬著頭皮起飛。
 相較於開車或是騎車是在地面上，不同於固體，乘載著飛行器的載體是氣體，而氣體會根據溫度、濕度、高度的不同有不同的特性，因此就衍生出了不同種類的空速。

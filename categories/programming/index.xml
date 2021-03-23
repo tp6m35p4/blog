@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Yu-Cheng Chen&#39;s blog</title>
+    <link>https://blog.yzchen.tw/categories/programming/</link>
+    <description>Recent content in Programming on Yu-Cheng Chen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>code server 與 iPadOS: 多一個買iPad的理由</title>
+      <link>https://blog.yzchen.tw/p/codeserver/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.yzchen.tw/p/codeserver/</guid>
+      <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

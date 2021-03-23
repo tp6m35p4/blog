@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.yzchen.tw/about/</loc>
+    <lastmod>2021-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/page/</loc>
+    <lastmod>2021-03-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/</loc>
+    <lastmod>2021-03-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.yzchen.tw/categories/aviation/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,31 +23,20 @@
     <loc>https://blog.yzchen.tw/p/airspeed/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/categories/%E8%88%AA%E7%A9%BA/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/p/codeserver/</loc>
     <lastmod>2020-11-15T23:28:54+08:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/categories/web-dev/</loc>
+    <loc>https://blog.yzchen.tw/categories/programming/</loc>
     <lastmod>2020-11-15T23:28:54+08:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/page/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/search/</loc>
   </url><url>
     <loc>https://blog.yzchen.tw/tags/</loc>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/test/</loc>
   </url>
 </urlset>

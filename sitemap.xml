@@ -20,20 +20,11 @@
     <loc>https://blog.yzchen.tw/categories/%E8%88%AA%E7%A9%BA/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/p/test-chinese/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/p/codeserver/</loc>
     <lastmod>2020-11-15T23:28:54+08:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/categories/test/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/categories/web-dev/</loc>
     <lastmod>2020-11-15T23:28:54+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
@@ -41,63 +32,13 @@
     <loc>https://blog.yzchen.tw/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/p/markdown-syntax-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/privacy/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/p/rich-content/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/shortcodes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/p/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/tag-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/test-with-whitespaces/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/p/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/p/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/search/</loc>
+  </url><url>
+    <loc>https://blog.yzchen.tw/tags/</loc>
+  </url><url>
+    <loc>https://blog.yzchen.tw/categories/test/</loc>
   </url>
 </urlset>

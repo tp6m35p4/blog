@@ -1071,6 +1071,59 @@ $$&lt;/p&gt;
     &gt;METAR - wikipedia&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
         </item>
+        <item>
+        <title>在CentOS 7上透過yum安裝Docker</title>
+        <link>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</link>
+        <pubDate>Sat, 29 Jun 2019 13:49:32 +0800</pubDate>
+        
+        <guid>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</guid>
+        <description>&lt;p&gt;這個教學是用於安裝Docker CE於CentOS 7上。&lt;/p&gt;
+&lt;h2 id=&#34;第0步-移除舊版&#34;&gt;第0步 移除舊版&lt;/h2&gt;
+&lt;p&gt;這個步驟用於移除作業系統上舊版的Docker，就算你不確定你的作業系統上有沒有安裝舊版Docker，可以運行以下的指令確保沒有存在舊版的Docker。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo yum remove docker &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-client &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-client-latest &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-common &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-latest &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-latest-logrotate &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-logrotate &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;                    docker-engine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第1步-安裝必要軟體&#34;&gt;第1步 安裝必要軟體&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo yum install -y yum-utils &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    device-mapper-persistent-data &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    lvm2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第2步-增加docker-repo到yum中&#34;&gt;第2步 增加Docker Repo到yum中&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo yum-config-manager &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    --add-repo &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    https://download.docker.com/linux/centos/docker-ce.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第3步-安裝docker-ce&#34;&gt;第3步 安裝Docker CE&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo yum install docker-ce docker-ce-cli containerd.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第4步-啟動docker&#34;&gt;第4步 啟動Docker&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;完成&#34;&gt;完成&lt;/h2&gt;
+&lt;p&gt;到這裡已經完成Docker的安裝，接下來為不一定需要做的步驟，但是是我在安裝完後一定會做的步驟&lt;/p&gt;
+&lt;h2 id=&#34;預設開機自動啟動docker&#34;&gt;預設開機自動啟動Docker&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo systemctl enable docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;設定為可以不用透過root就可以管理docker&#34;&gt;設定為可以不用透過root就可以管理Docker&lt;/h2&gt;
+&lt;p&gt;新增docker使用者群組&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo groupadd docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;將目前登入的使用者加進去&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo usermod -aG docker $USER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;驗證&#34;&gt;驗證&lt;/h2&gt;
+&lt;p&gt;透過運行docker hello-world映象檔來驗證Docker是否安裝成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ sudo docker run hello-world
+//沒有設定不用root就可以運行docker
+
+$ docker run hello-world
+//有設定不用root就可以運行docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/install/linux/docker-ce/centos/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Get Docker CE for CentOS&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/install/linux/linux-postinstall/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Post-installation steps for Linux&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+        </item>
         
     </channel>
 </rss>

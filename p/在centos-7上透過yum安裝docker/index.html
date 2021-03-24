@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在iPadOS上用VS Code吧！'><title>Code server 與 iPadOS: 多一個買iPad的理由</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='這個教學是用於安裝Docker CE於CentOS 7上。
+'><title>在CentOS 7上透過yum安裝Docker</title>
 
-<link rel='canonical' href='https://blog.yzchen.tw/p/codeserver/'>
+<link rel='canonical' href='https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Code server 與 iPadOS: 多一個買iPad的理由'>
-<meta property='og:description' content='在iPadOS上用VS Code吧！'>
-<meta property='og:url' content='https://blog.yzchen.tw/p/codeserver/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='在CentOS 7上透過yum安裝Docker'>
+<meta property='og:description' content='這個教學是用於安裝Docker CE於CentOS 7上。
+'>
+<meta property='og:url' content='https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/'>
 <meta property='og:site_name' content='Yu-Cheng Chen&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Programming' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2020-09-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-11-15T23:28:54&#43;08:00'/>
-<meta name="twitter:title" content="Code server 與 iPadOS: 多一個買iPad的理由">
-<meta name="twitter:description" content="在iPadOS上用VS Code吧！">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='Centos7' /><meta property='article:tag' content='Programming' /><meta property='article:published_time' content='2019-06-29T13:49:32&#43;08:00'/><meta property='article:modified_time' content='2019-06-29T13:49:32&#43;08:00'/>
+<meta name="twitter:title" content="在CentOS 7上透過yum安裝Docker">
+<meta name="twitter:description" content="這個教學是用於安裝Docker CE於CentOS 7上。
+">
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -223,13 +226,9 @@ if (!doNotTrack) {
     
 
     <h2 class="article-title">
-        <a href="/p/codeserver/">Code server 與 iPadOS: 多一個買iPad的理由</a>
+        <a href="/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/">在CentOS 7上透過yum安裝Docker</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        在iPadOS上用VS Code吧！
-    </h3>
     <footer class="article-time">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -239,66 +238,67 @@ if (!doNotTrack) {
 
 
 
-        <time class="article-time--published">Sep 09, 2020</time>
+        <time class="article-time--published">Jun 29, 2019</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <p>在iPadOS上用VS Code吧！<!-- raw HTML omitted --></p>
-<h1 id="code-server-與-ipados-多一個買ipad的理由">code server 與 iPadOS: 多一個買iPad的理由</h1>
-<p>最近在找iPad Pro能夠發揮生產力的場景，於是就想到了code server</p>
-<h2 id="我用的環境">我用的環境</h2>
-<p>OS: centOS 7</p>
-<h2 id="code-server-是什麼">code server 是什麼</h2>
-<p>根據他們<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >Github</a>上的敘述，他就是瀏覽器上的VS Code (VS Code in the browser)，其實就是可以透過瀏覽器去遠端到伺服器中的VS Code，更白話就是可以在網頁上寫程式啦。</p>
-<h2 id="code-server-的安裝">code server 的安裝</h2>
-<blockquote>
-<p>其實安裝很簡單，照著<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >Github</a>上面的步驟去走就可以了</p>
-</blockquote>
-<p>複製貼上就可以了</p>
-<pre><code>curl -fsSL https://code-server.dev/install.sh | sh
-</code></pre><p>code server有兩種連線方式，一種是透過SSH forwarding來連線，另一種是把這個服務公開到外網上</p>
-<h3 id="更換登入密碼">更換登入密碼</h3>
-<p>登入密碼寫在<code>~/.config/code-server/config.yaml</code>這個檔案裡面，去換成自己喜歡的吧～</p>
-<h3 id="nginx設定">Nginx設定</h3>
-<p>下面是範例的conf內容，比較要注意的是因為code server有使用web socket，所以要加上跟web socket有關的設定。</p>
-<pre><code>server {
-    listen 80;
-    listen [::]:80;
-    server_name mydomain.com;
+    <p>這個教學是用於安裝Docker CE於CentOS 7上。</p>
+<h2 id="第0步-移除舊版">第0步 移除舊版</h2>
+<p>這個步驟用於移除作業系統上舊版的Docker，就算你不確定你的作業系統上有沒有安裝舊版Docker，可以運行以下的指令確保沒有存在舊版的Docker。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum remove docker <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-client <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-client-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-common <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-latest-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-engine
+</code></pre></div><h2 id="第1步-安裝必要軟體">第1步 安裝必要軟體</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum install -y yum-utils <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    device-mapper-persistent-data <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    lvm2
+</code></pre></div><h2 id="第2步-增加docker-repo到yum中">第2步 增加Docker Repo到yum中</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum-config-manager <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --add-repo <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div><h2 id="第3步-安裝docker-ce">第3步 安裝Docker CE</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre></div><h2 id="第4步-啟動docker">第4步 啟動Docker</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl start docker
+</code></pre></div><h2 id="完成">完成</h2>
+<p>到這裡已經完成Docker的安裝，接下來為不一定需要做的步驟，但是是我在安裝完後一定會做的步驟</p>
+<h2 id="預設開機自動啟動docker">預設開機自動啟動Docker</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl enable docker
+</code></pre></div><h2 id="設定為可以不用透過root就可以管理docker">設定為可以不用透過root就可以管理Docker</h2>
+<p>新增docker使用者群組</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo groupadd docker
+</code></pre></div><p>將目前登入的使用者加進去</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo usermod -aG docker $USER
+</code></pre></div><h2 id="驗證">驗證</h2>
+<p>透過運行docker hello-world映象檔來驗證Docker是否安裝成功</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo docker run hello-world
+//沒有設定不用root就可以運行docker
 
-    location / {
-      proxy_pass http://localhost:8080/;
-      proxy_set_header Host $host;
-      # for web socket
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection upgrade;
-      proxy_set_header Accept-Encoding gzip;
-    }
-}
-</code></pre><h3 id="重新啟動code-server">重新啟動code server</h3>
-<p><code>sudo systemctl restart code-server@$USER</code></p>
-<h3 id="要用在ipad上必須要做的事">要用在iPad上必須要做的事</h3>
+$ docker run hello-world
+//有設定不用root就可以運行docker
+</code></pre></div><h2 id="參考資料">參考資料</h2>
 <blockquote>
-<p>必須要有HTTPS、必須要有HTTPS、必須要有HTTPS，很重要所以說三次</p>
+<p><a class="link" href="https://docs.docker.com/install/linux/docker-ce/centos/"  target="_blank" rel="noopener"
+    ><strong>Get Docker CE for CentOS</strong></a></p>
+<p><a class="link" href="https://docs.docker.com/install/linux/linux-postinstall/"  target="_blank" rel="noopener"
+    ><strong>Post-installation steps for Linux</strong></a></p>
 </blockquote>
-<h4 id="cloudflare的半套呢">CloudFlare的半套呢？</h4>
-<p>在使用Let&rsquo;s Encrypt之前我是用CloudFlare提供的半套HTTPS，也就是說從瀏覽器到CloudFlare之間有保護，從CloudFlare到伺服器是沒保護的，這個做法在windows跟macOS上是沒有問題的，<br>
-<strong>罷特</strong>！當要從iPadOS上使用這個服務的時候，會沒辦法建立web socket的連線，所以還是得乖乖用憑證啦～</p>
-<h2 id="後話">後話</h2>
-<p>在設定完code server後就馬上用他來寫了一個小專案，不得不說把開發環境放在伺服器上還是比較方便，不用怕連線不穩定、還可以有固定IP。另外在iPad上寫程式的體驗說實在的還不錯，不過長時間或開發大型專案可能會<del>不好抄code</del>有點吃力，重點是，我好想買鍵盤RRRRRR。</p>
-<p>最近的大新聞就是以後的mac要換成arm架構了，期待會有更多具有生產力的軟體可以在iPad上使用到。</p>
-<h2 id="reference">Reference</h2>
-<p><a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >https://github.com/cdr/code-server</a></p>
 </section>
 
 
     <footer class="article-footer">
     
     <section class="article-tags">
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/centos7/">Centos7</a>
         
             <a href="/tags/programming/">Programming</a>
         
@@ -317,19 +317,7 @@ if (!doNotTrack) {
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    <section class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <span class="article-time--modified">
-            Last updated on Nov 15, 2020 23:28 CST
-        </span>
-    </section></footer>
+    </footer>
 
     
 </article>
@@ -343,12 +331,12 @@ if (!doNotTrack) {
                 
                     
 <article class="">
-    <a href="/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/">
+    <a href="/p/codeserver/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">在CentOS 7上透過yum安裝Docker</h2>
+            <h2 class="article-title">Code server 與 iPadOS: 多一個買iPad的理由</h2>
         </div>
     </a>
 </article>

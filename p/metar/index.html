@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR'><title>Metar意義簡介與編碼對照</title>
+
+<link rel='canonical' href='https://blog.yzchen.tw/p/metar/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Metar意義簡介與編碼對照'>
+<meta property='og:description' content='介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR'>
+<meta property='og:url' content='https://blog.yzchen.tw/p/metar/'>
+<meta property='og:site_name' content='Yu-Cheng Chen&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Aviation' /><meta property='article:tag' content='METAR' /><meta property='article:published_time' content='2019-06-30T11:35:54&#43;08:00'/><meta property='article:modified_time' content='2019-06-30T11:35:54&#43;08:00'/>
+<meta name="twitter:title" content="Metar意義簡介與編碼對照">
+<meta name="twitter:description" content="介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143004637-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/me_huddb9c0e220083761bb5aa1641e30f46a_629401_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🥰</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://blog.yzchen.tw">Yu-Cheng Chen</a></h1>
+        <h2 class="site-description">Thinking gives the way to practice.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://blog.yzchen.tw" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/aviation/" >
+                Aviation
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/metar/">Metar意義簡介與編碼對照</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 30, 2019</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <p>介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR<!-- raw HTML omitted --></p>
+<p>METAR的中文是航空氣象電碼，跟許多航空術語一樣(像是Mayday)原文來自法文 <code>message d'observation météorologique régulière pour l'aviation</code>，取第一個字組成METAR。 <!-- raw HTML omitted --></p>
+<p>在美國聯邦航空局和美國國家氣象局將 METAR 在英語的角度看成為<code>METeorological Aerodrome Report</code>，這也視作 METAR 名稱的由來。</p>
+<h2 id="簡介-introduction">簡介 Introduction</h2>
+<blockquote>
+<p>METAR是包括了<a class="link" href="https://zh.wikipedia.org/wiki/%e6%ba%ab%e5%ba%a6"  target="_blank" rel="noopener"
+    >溫度</a>，<a class="link" href="https://zh.wikipedia.org/wiki/%e9%9c%b2%e9%bb%9e"  target="_blank" rel="noopener"
+    >露點溫度</a>，<a class="link" href="https://zh.wikipedia.org/wiki/%e9%a2%a8%e5%90%91"  target="_blank" rel="noopener"
+    >風向</a>，<a class="link" href="https://zh.wikipedia.org/wiki/%e9%9b%b2"  target="_blank" rel="noopener"
+    >雲</a>的資訊，<a class="link" href="https://zh.wikipedia.org/wiki/%e8%83%bd%e8%a6%8b%e5%ba%a6"  target="_blank" rel="noopener"
+    >能見度</a>和給飛行員修正高度錶的<a class="link" href="https://zh.wikipedia.org/wiki/%e6%b0%a3%e5%a3%93"  target="_blank" rel="noopener"
+    >氣壓</a>讀數。除此之外，METAR還可以包括降水，<a class="link" href="https://zh.wikipedia.org/wiki/%e9%9b%b7"  target="_blank" rel="noopener"
+    >雷</a>和其他特別天氣狀況的資訊。</p>
+</blockquote>
+<p>METAR是航空安全很重要的一環，它代表的是當前機場的氣象資訊。對一般人來說，他也可以是規劃出行觀察天氣的好幫手。</p>
+<p>在範例當中，可以看到同一角度不同時間、天氣的變化，而那個方向正好是台北松山機場(RCSS)，而台北101正好成為天氣的指針，從拍攝地點到台北101正好為2公里，台北101高度為508公尺，正巧為好天氣以及壞天氣的臨界區域。</p>
+<p>寫信告訴我今天海是什麼顏色。透過記錄天氣，將對這個城市的思念記錄下來，也分享給曾經駐足於這個城市的人們，台北的天空是什麼顏色。</p>
+<h2 id="格式-format">格式 Format</h2>
+<h4 id="metar當中會包含幾個區塊">METAR當中會包含幾個區塊</h4>
+<p>Note：格式當中非變數以<strong>粗體</strong>標示</p>
+<ul>
+<li>報文類型
+<ul>
+<li>格式：<strong>METAR</strong>/<strong>SPECI</strong></li>
+</ul>
+</li>
+<li>測站名稱：該報文發布之氣象測站
+<ul>
+<li>格式：CCCC</li>
+<li>以國際民航組織(ICAO)所規定的航用地名來表示</li>
+</ul>
+</li>
+<li>觀測時間：當月之日期和<strong>UTC</strong>時區之小時及分鐘
+<ul>
+<li>格式：DDHHmm<strong>Z</strong></li>
+<li>統一使用<strong>UTC</strong>時區</li>
+<li>Z表示zulu</li>
+</ul>
+</li>
+<li>風向風速
+<ul>
+<li>格式：aaaff<strong>G</strong>FF<strong>KT/MPS</strong> ddd<strong>V</strong>DDD</li>
+<li>aaa為風向方位</li>
+<li>ff為風速</li>
+<li>若最大陣風之風速超過平均風速10KT以上時，GFF之FF為最大陣風之風速</li>
+<li>單位可以為KT或是MPS</li>
+<li>平均風速小於3KT時，aaa應編碼為<strong>VRB</strong></li>
+<li>ddd<strong>V</strong>DDD為風向變化的極端方位，按順時針方向編碼，例：060<strong>V</strong>160</li>
+</ul>
+</li>
+<li>能見度
+<ul>
+<li>格式：VVVV vvvvD</li>
+<li>VVVV為四位數字，代表能見度</li>
+<li>vvvvD中vvvv為四位數字，D為羅盤八方位。當該方位之能見度小於VVVV的50%且小於5000時或是小於1500時，需在報文中特地標註</li>
+<li>單位為公尺</li>
+<li>9999表示10公里和以上</li>
+</ul>
+</li>
+<li>跑道視程：當能見度或是跑道視程低於1500時，應於報文中增加跑道視程資料
+<ul>
+<li>格式：<strong>R</strong>DD**/**VVVVi</li>
+<li><strong>R</strong>DD中之DD代表跑道</li>
+<li>VVVV代表該跑道之能見度</li>
+<li>i代表能見度趨勢，值可以為
+<ul>
+<li>U：上升趨勢</li>
+<li>D：下降趨勢</li>
+<li>N：無明顯變化</li>
+<li>省略：無法決定</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>現在天氣
+<ul>
+<li>由<a class="link" href="#Intensity" >修飾詞</a> + <a class="link" href="#descriptor" >敘述詞</a> + 天氣現象(<a class="link" href="#precipitation" >降水類型 (Precipitation)</a>, <a class="link" href="#obscuration" >視障類型 (Obscuration)</a> or <a class="link" href="#other" >其他現象 (Other phenomena)</a>)組成</li>
+</ul>
+</li>
+<li>雲：標記會影響飛航操作之雲
+<ul>
+<li>格式：NNNhhh or <strong>VV</strong>hhh or <strong>NSC</strong> or <strong>NCD</strong></li>
+<li>NNN為雲量，參考<a class="link" href="#cr" >Cloud report</a></li>
+<li>hhh為雲底高度，需乘上100，單位為英尺(ft)</li>
+<li><strong>VV</strong>、<strong>NSC</strong>和<strong>NCD</strong>參考<a class="link" href="#cr" >Cloud report</a></li>
+</ul>
+</li>
+<li><strong>CAVOK</strong>：天氣很好的時候使用，也就是下列情況同時發生
+<ul>
+<li>能見度 9999 且未編報 vvvvD組</li>
+<li>5000ft 以下無雲，且無機雨雲及塔狀積雲</li>
+<li>無顯著天氣現象</li>
+</ul>
+</li>
+<li>溫度露點
+<ul>
+<li>格式：TT**/**tt</li>
+<li>TT為溫度</li>
+<li>tt為露點溫度</li>
+<li>負數於數字前方加M</li>
+</ul>
+</li>
+<li>高度表撥定值：供飛行員撥定高度表
+<ul>
+<li>格式：<strong>Q</strong>PPPP</li>
+<li>單位為百帕</li>
+</ul>
+</li>
+<li>補充資訊</li>
+<li>趨勢預報</li>
+<li>附註</li>
+</ul>
+<h2 id="範例-example">範例 Example</h2>
+<p><img src="https://i.imgur.com/bWstGei.jpg" alt=""  /></p>
+<p><code>METAR RCSS 041000Z 11003KT 060V160 9999 FEW030 BKN250 31/25 Q1007 NOSIG RMK A2976</code></p>
+<table>
+<thead>
+<tr>
+<th>區塊名稱</th>
+<th>範例中的資訊</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>報告類型</td>
+<td>METAR</td>
+<td></td>
+</tr>
+<tr>
+<td>測站名稱</td>
+<td>RCSS</td>
+<td></td>
+</tr>
+<tr>
+<td>觀測時間</td>
+<td>041000Z</td>
+<td>GMT時間</td>
+</tr>
+<tr>
+<td>風向風速</td>
+<td>11003KT 060V160</td>
+<td>風向110 風速04KT(knot) 風向變化區間080-120</td>
+</tr>
+<tr>
+<td>能見度</td>
+<td>9999</td>
+<td></td>
+</tr>
+<tr>
+<td>跑道視程</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>現在天氣</td>
+<td></td>
+<td>陣雨，搭配<a class="link" href="#wx" >METAR WX codes</a>服用</td>
+</tr>
+<tr>
+<td>雲</td>
+<td>FEW030 BKN250</td>
+<td>搭配<a class="link" href="#cr" >Cloud report</a>服用</td>
+</tr>
+<tr>
+<td>CAVOK</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>溫度露點</td>
+<td>31/25</td>
+<td>溫度25 露點溫度24，負數需在前加M</td>
+</tr>
+<tr>
+<td>高度表撥定值</td>
+<td>Q1007</td>
+<td>QNH1004，機場地表氣壓</td>
+</tr>
+<tr>
+<td>補充資訊</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>趨勢預報</td>
+<td>NOSIG</td>
+<td>無顯著變化</td>
+</tr>
+<tr>
+<td>附註</td>
+<td>RMK A2976</td>
+<td>高度計(Altimeter) 2976</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><img src="https://i.imgur.com/D5TvM0m.jpg" alt="下面METAR對應的天氣"  /></p>
+<p><code>METAR RCSS 110441Z 11004KT 080V120 1400 R10/1900N SHRA FEW005 BKN020 BKN035 25/24 Q1004 NOSIG RMK A2966</code></p>
+<table>
+<thead>
+<tr>
+<th>區塊名稱</th>
+<th>範例中的資訊</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>報告類型</td>
+<td>METAR</td>
+<td></td>
+</tr>
+<tr>
+<td>測站名稱</td>
+<td>RCSS</td>
+<td></td>
+</tr>
+<tr>
+<td>觀測時間</td>
+<td>110441Z</td>
+<td>GMT時間</td>
+</tr>
+<tr>
+<td>風向風速</td>
+<td>11004KT 080V120</td>
+<td>風向110 風速04KT(knot) 風向變化區間080-120</td>
+</tr>
+<tr>
+<td>能見度</td>
+<td>1400</td>
+<td></td>
+</tr>
+<tr>
+<td>跑道視程</td>
+<td>R10/1900N</td>
+<td></td>
+</tr>
+<tr>
+<td>現在天氣</td>
+<td>SHRA</td>
+<td>陣雨，搭配<a class="link" href="#wx" >METAR WX codes</a>服用</td>
+</tr>
+<tr>
+<td>雲</td>
+<td>FEW005 BKN020 BKN035</td>
+<td>搭配<a class="link" href="#cr" >Cloud report</a>服用</td>
+</tr>
+<tr>
+<td>CAVOK</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>溫度露點</td>
+<td>25/24</td>
+<td>溫度25 露點溫度24，負數需在前加M</td>
+</tr>
+<tr>
+<td>高度表撥定值</td>
+<td>Q1004</td>
+<td>QNH1004，機場地表氣壓</td>
+</tr>
+<tr>
+<td>補充資訊</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>趨勢預報</td>
+<td>NOSIG</td>
+<td>無顯著變化</td>
+</tr>
+<tr>
+<td>附註</td>
+<td>RMK A2966</td>
+<td>高度計(Altimeter) 2966</td>
+</tr>
+</tbody>
+</table>
+<h2 id="電碼解釋-code-explanation">電碼解釋 Code Explanation</h2>
+<!-- raw HTML omitted -->
+<p>在METAR當中的天氣區域 (WX section)會使用氣象代碼的縮寫 (Abbreviation)做為表示方式。這些縮寫是由WMO (<a class="link" href="https://en.wikipedia.org/wiki/World_Meteorological_Organization"  target="_blank" rel="noopener"
+    >World Meteorological Organization</a>)所定義，在METAR有使用的氣象縮寫中，分為以下幾種：</p>
+<ul>
+<li><a class="link" href="#intensity" >修飾詞 (Intensity)</a></li>
+<li><a class="link" href="#descriptor" >天氣現象特性 (Descriptor)</a></li>
+<li>天氣現象類型
+<ul>
+<li><a class="link" href="#precipitation" >降水類型 (Precipitation)</a></li>
+<li><a class="link" href="#obscuration" >視障類型 (Obscuration)</a>
+<ul>
+<li>水象</li>
+<li>塵象</li>
+</ul>
+</li>
+<li><a class="link" href="#other" >其他現象 (Other phenomena)</a></li>
+</ul>
+</li>
+<li><a class="link" href="#time" >時間 (Time)</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>Light intensity</td>
+</tr>
+<tr>
+<td></td>
+<td>Moderate intensity</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Heavy intensity</td>
+</tr>
+<tr>
+<td>VC</td>
+<td>In the vicinity</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>意涵</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI</td>
+<td>Shallow (French: <em>Mince</em>)</td>
+<td>淺的</td>
+<td></td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Partial</td>
+<td>部分</td>
+<td></td>
+</tr>
+<tr>
+<td>BC</td>
+<td>Patches (French: <em>Bancs</em>)</td>
+<td>片狀</td>
+<td></td>
+</tr>
+<tr>
+<td>DR</td>
+<td>Low drifting</td>
+<td>低吹</td>
+<td>under 2m</td>
+</tr>
+<tr>
+<td>BL</td>
+<td>Blowing</td>
+<td>高吹</td>
+<td>over 2m</td>
+</tr>
+<tr>
+<td>FZ</td>
+<td>Freezing</td>
+<td>凍結</td>
+<td>過冷水滴或降水</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>Thunderstorm</td>
+<td>雷暴</td>
+<td></td>
+</tr>
+<tr>
+<td>SH</td>
+<td>Shower</td>
+<td>陣性</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>意涵</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DZ</td>
+<td>Drizzle</td>
+<td>毛雨</td>
+<td></td>
+</tr>
+<tr>
+<td>RA</td>
+<td>Rain</td>
+<td>雨</td>
+<td></td>
+</tr>
+<tr>
+<td>SN</td>
+<td>Snow</td>
+<td>雪</td>
+<td></td>
+</tr>
+<tr>
+<td>SG</td>
+<td>Snow grains</td>
+<td>雪粒</td>
+<td></td>
+</tr>
+<tr>
+<td>PL</td>
+<td>Ice pellets</td>
+<td>冰珠</td>
+<td></td>
+</tr>
+<tr>
+<td>IC</td>
+<td>Ice crystals (diamond dust)</td>
+<td>冰晶(鑽塵)</td>
+<td>only visibility visibility less than 5000</td>
+</tr>
+<tr>
+<td>GS</td>
+<td>Small hail and/or snow pellets (French: <em>Grésil</em>)</td>
+<td>小雹及/或霰</td>
+<td>smaller than 5mm</td>
+</tr>
+<tr>
+<td>GR</td>
+<td>Hail (French: <em>Grêle</em>)</td>
+<td>雹</td>
+<td>bigger than 5mm</td>
+</tr>
+<tr>
+<td>UP</td>
+<td>Unknown Precipitation</td>
+<td>未知</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>意涵</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FG</td>
+<td>Fog</td>
+<td>霧</td>
+<td>visibility less than 1000</td>
+</tr>
+<tr>
+<td>BR</td>
+<td>Mist (French: <em>Brume</em>)</td>
+<td>霭</td>
+<td>visibility between 1000 and 5000</td>
+</tr>
+<tr>
+<td>SA</td>
+<td>Sand</td>
+<td>沙</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>Dust (widespread)</td>
+<td>塵(大範圍的)</td>
+<td></td>
+</tr>
+<tr>
+<td>HZ</td>
+<td>Haze</td>
+<td>霾</td>
+<td></td>
+</tr>
+<tr>
+<td>FU</td>
+<td>Smoke (French: <em>Fumée</em>)</td>
+<td>煙</td>
+<td></td>
+</tr>
+<tr>
+<td>VA</td>
+<td>Volcanic Ash</td>
+<td>火山灰</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>意涵</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PO</td>
+<td>Dust or Sand Whirls (dust devils)</td>
+<td>塵/沙旋風 (塵捲風)</td>
+<td></td>
+</tr>
+<tr>
+<td>SQ</td>
+<td>Squall</td>
+<td>颮</td>
+<td></td>
+</tr>
+<tr>
+<td>FC</td>
+<td>Funnel cloud (Tornado or waterspout)</td>
+<td>漏斗雲 (龍捲風或水龍捲)</td>
+<td></td>
+</tr>
+<tr>
+<td>DS</td>
+<td>Duststorm</td>
+<td>塵暴</td>
+<td></td>
+</tr>
+<tr>
+<td>SS</td>
+<td>Sandstorm</td>
+<td>沙暴</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- raw HTML omitted -->
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>意涵</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td>Began At Time</td>
+<td>開始時間</td>
+<td></td>
+</tr>
+<tr>
+<td>E</td>
+<td>Ended At Time</td>
+<td>結束時間</td>
+<td></td>
+</tr>
+<tr>
+<td>2 digits</td>
+<td>Minutes of current hour</td>
+<td>分鐘</td>
+<td></td>
+</tr>
+<tr>
+<td>4 digits</td>
+<td>Hour/Minutes <strong>Zulu</strong> Time</td>
+<td>標準時間</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<!-- raw HTML omitted -->
+<blockquote>
+<p>Cloud coverage is reported by the number of &lsquo;<a class="link" href="https://en.wikipedia.org/wiki/Okta"  target="_blank" rel="noopener"
+    >oktas</a>&rsquo; (eighths) of the sky that is occupied by cloud.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKC</td>
+<td>No cloud/Sky clear</td>
+<td></td>
+</tr>
+<tr>
+<td>NCD</td>
+<td>Nil cloud detected</td>
+<td></td>
+</tr>
+<tr>
+<td>CLR</td>
+<td>No clouds below FL120 or FL250</td>
+<td></td>
+</tr>
+<tr>
+<td>NSC</td>
+<td>No significant cloud</td>
+<td></td>
+</tr>
+<tr>
+<td>FEW</td>
+<td>Few = 1-2 oktas (1-2/8)</td>
+<td></td>
+</tr>
+<tr>
+<td>SCT</td>
+<td>Scattered = 3–4 oktas (3-4/8)</td>
+<td></td>
+</tr>
+<tr>
+<td>BKN</td>
+<td>Broken = 5–7 oktas (5-7/8)</td>
+<td></td>
+</tr>
+<tr>
+<td>OVC</td>
+<td>Overcast = 8 oktas (8/8)</td>
+<td></td>
+</tr>
+<tr>
+<td>VV</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="參考資料-reference">參考資料 Reference</h2>
+<blockquote>
+<p><a class="link" href="https://aoaws.anws.gov.tw/data/tamc/DownloadFiles/code.pdf"  target="_blank" rel="noopener"
+    >航空器象電碼彙編</a></p>
+<p><a class="link" href="http://www.aeromet.org.tw/chinese/aeromet/aw006/06-05.pdf"  target="_blank" rel="noopener"
+    >航空器象教室</a></p>
+<p><a class="link" href="[https://zh.wikipedia.org/wiki/%E8%88%AA%E7%A9%BA%E4%BE%8B%E8%A1%8C%E5%A4%A9%E6%B0%A3%E5%A0%B1%E5%91%8A]%28https://zh.wikipedia.org/wiki/%e8%88%aa%e7%a9%ba%e4%be%8b%e8%a1%8c%e5%a4%a9%e6%b0%a3%e5%a0%b1%e5%91%8a%29" >航空例行天氣報告 - wikipedia</a></p>
+<p><a class="link" href="https://en.wikipedia.org/wiki/METAR"  target="_blank" rel="noopener"
+    >METAR - wikipedia</a></p>
+</blockquote>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/aviation/">Aviation</a>
+        
+            <a href="/tags/metar/">METAR</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/airspeed/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Type of Airspeed 空速的種類</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-90lrr5iqaq" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 Yu-Cheng Chen&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+    
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script>
+    MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+</html>

@@ -5,6 +5,25 @@
     <link>https://blog.yzchen.tw/tags/</link>
     <description>Recent content in Tags on Yu-Cheng Chen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language><atom:link href="https://blog.yzchen.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 30 Jun 2019 11:35:54 +0800</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aviation</title>
+      <link>https://blog.yzchen.tw/tags/aviation/</link>
+      <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
+      
+      <guid>https://blog.yzchen.tw/tags/aviation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>METAR</title>
+      <link>https://blog.yzchen.tw/tags/metar/</link>
+      <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
+      
+      <guid>https://blog.yzchen.tw/tags/metar/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Yu-Cheng Chen&#39;s blog</title>
+    <title>Pages on 白白的飛行箱</title>
     <link>https://blog.yzchen.tw/page/</link>
-    <description>Recent content in Pages on Yu-Cheng Chen&#39;s blog</description>
+    <description>Recent content in Pages on 白白的飛行箱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/page/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,10 @@
       <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://blog.yzchen.tw/about/</guid>
-      <description></description>
+      <description>An av geek, a coder and a truly optimistic guy.
+ 歡迎來到白白的飛行箱，這裡是我分享一些知識、經驗的地方。
+就像飛行箱一樣，裡面的東西看似雜亂無章，卻可以幫助機師完成每一次的飛行，彷彿只要拖著他出任務，就沒有甚麼不可能。
+Visit my personal page here</description>
     </item>
     
     <item>

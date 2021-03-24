@@ -6,7 +6,37 @@
     <description>Recent content in Aviation on Yu-Cheng Chen&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 30 Jun 2019 11:35:54 +0800</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/aviation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/aviation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Type of Airspeed 空速的種類</title>
+      <link>https://blog.yzchen.tw/p/airspeed/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.yzchen.tw/p/airspeed/</guid>
+      <description>Type of Airspeed 空速的種類  V1, rotate, V2. Positive rate, gears up.
+上面這段話應該是所有航空人最熟悉的話了，當中V1是決斷速度，代表能夠放棄起飛的最大速度，也就是說當你超過這個速度，剩餘的跑道長度將不夠讓飛機安全停下，只能硬著頭皮起飛。
+相較於開車或是騎車是在地面上，不同於固體，乘載著飛行器的載體是氣體，而氣體會根據溫度、濕度、高度的不同有不同的特性，因此就衍生出了不同種類的空速。
+ 種類 Indicated Airspeed, IAS 測量空速/指示空速 從儀器直接測量壓力差換算得到的空速，沒有經過校正。
+指示空速由於是反映出動壓的大小，而飛行器的空氣動力性能跟動壓的大小較為相關，因此指示空速是判斷飛行器空氣動力操縱面的指標，像是放襟翼、失速速度，都需要參考指示空速。
+V1, Vr, V2是使用指示空速(IAS)！
+Calibrated Airspeed, CAS 校正空速 在指示空速(IAS)的基礎上，對於儀器、皮托管安裝位置等誤差進行矯正之後得到的空速。
+通常在襟翼放下之後和指示空速(IAS)的差異會變得更大，因為飛機的升力中心會改變，皮托管和風的夾角會更大。
+Equivalent Airspeed, EAS 等效空速 在校正空速(CAS)的基礎上，考量空氣的可壓縮性(compressibility effect)所得到的空速。
+飛行速度&amp;lt;200kt的飛行器基本上都會忽略這個。
+True Airspeed, TAS 真空速 飛行器與空氣的相對速度，飛行計劃、飛機工程方面都會用真空速(TAS)，油料的計算也與真空速(TAS)有關。
+Ground Speed, GS 地速 飛行器對地的速度，可以用來估計還有多久會到目的地。
+Mach number 馬赫數 飛行器飛行速度與音速的比例，在高空高速的情況下較具參考性。
+目前一般的民航機的真空速換算下來都不會超過1馬赫，也就是不會超過音速，因此屬於次音速(subsonic)的飛行器。
+空速間的關係 Relationship
+儀表 這張是737的PFD(左邊)以及MFD(右邊)，可以看到不同空速出現的位置，不同的位置也代表著在飛行當中的重要性，像是指示空速(IAS)就出在PFD上面，代表在飛行過程中是很重要的參考數據。
+另外在MFD可以看到有顯示地速、真空速與風向/風速，地速是真空速加上行徑方向的風速分量，在這裡可以粗略的計算
+$$
+337 + (cos(252-180-1)*21)=344
+$$
+Flight Director
+測量 It&amp;rsquo;s all about pressure.</description>
+    </item>
+    
     <item>
       <title>Metar意義簡介與編碼對照</title>
       <link>https://blog.yzchen.tw/p/metar/</link>

@@ -17,20 +17,29 @@
     </item>
     
     <item>
-      <title>航空</title>
-      <link>https://blog.yzchen.tw/categories/%E8%88%AA%E7%A9%BA/</link>
-      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.yzchen.tw/categories/%E8%88%AA%E7%A9%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Programming</title>
       <link>https://blog.yzchen.tw/categories/programming/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.yzchen.tw/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pajek</title>
+      <link>https://blog.yzchen.tw/categories/pajek/</link>
+      <pubDate>Tue, 16 Jul 2019 12:57:55 +0800</pubDate>
+      
+      <guid>https://blog.yzchen.tw/categories/pajek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Patent</title>
+      <link>https://blog.yzchen.tw/categories/patent/</link>
+      <pubDate>Tue, 16 Jul 2019 12:57:55 +0800</pubDate>
+      
+      <guid>https://blog.yzchen.tw/categories/patent/</guid>
       <description></description>
     </item>
     

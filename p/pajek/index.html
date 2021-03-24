@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在iPadOS上用VS Code吧！'><title>Code server 與 iPadOS: 多一個買iPad的理由</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Pajek is a visualize application. It usually used to show the relationship between target according data.
+'><title>Pajek Learning</title>
 
-<link rel='canonical' href='https://blog.yzchen.tw/p/codeserver/'>
+<link rel='canonical' href='https://blog.yzchen.tw/p/pajek/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Code server 與 iPadOS: 多一個買iPad的理由'>
-<meta property='og:description' content='在iPadOS上用VS Code吧！'>
-<meta property='og:url' content='https://blog.yzchen.tw/p/codeserver/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Pajek Learning'>
+<meta property='og:description' content='Pajek is a visualize application. It usually used to show the relationship between target according data.
+'>
+<meta property='og:url' content='https://blog.yzchen.tw/p/pajek/'>
 <meta property='og:site_name' content='Yu-Cheng Chen&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Programming' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2020-09-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-11-15T23:28:54&#43;08:00'/>
-<meta name="twitter:title" content="Code server 與 iPadOS: 多一個買iPad的理由">
-<meta name="twitter:description" content="在iPadOS上用VS Code吧！">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Pajek' /><meta property='article:tag' content='Patent' /><meta property='article:published_time' content='2019-07-16T12:57:55&#43;08:00'/><meta property='article:modified_time' content='2019-07-16T12:57:55&#43;08:00'/>
+<meta name="twitter:title" content="Pajek Learning">
+<meta name="twitter:description" content="Pajek is a visualize application. It usually used to show the relationship between target according data.
+">
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -215,21 +218,21 @@ if (!doNotTrack) {
     
     <header class="article-category">
         
-            <a href="/categories/programming/" style="background-color: #e6b547; color: #fff;">
-                Programming
+            <a href="/categories/pajek/" >
+                Pajek
+            </a>
+        
+            <a href="/categories/patent/" >
+                Patent
             </a>
         
     </header>
     
 
     <h2 class="article-title">
-        <a href="/p/codeserver/">Code server 與 iPadOS: 多一個買iPad的理由</a>
+        <a href="/p/pajek/">Pajek Learning</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        在iPadOS上用VS Code吧！
-    </h3>
     <footer class="article-time">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -239,60 +242,126 @@ if (!doNotTrack) {
 
 
 
-        <time class="article-time--published">Sep 09, 2020</time>
+        <time class="article-time--published">Jul 16, 2019</time>
     </footer></div>
 </header>
 
     <section class="article-content">
-    <p>在iPadOS上用VS Code吧！<!-- raw HTML omitted --></p>
-<h1 id="code-server-與-ipados-多一個買ipad的理由">code server 與 iPadOS: 多一個買iPad的理由</h1>
-<p>最近在找iPad Pro能夠發揮生產力的場景，於是就想到了code server</p>
-<h2 id="我用的環境">我用的環境</h2>
-<p>OS: centOS 7</p>
-<h2 id="code-server-是什麼">code server 是什麼</h2>
-<p>根據他們<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >Github</a>上的敘述，他就是瀏覽器上的VS Code (VS Code in the browser)，其實就是可以透過瀏覽器去遠端到伺服器中的VS Code，更白話就是可以在網頁上寫程式啦。</p>
-<h2 id="code-server-的安裝">code server 的安裝</h2>
+    <p>Pajek is a visualize application. It usually used to show the relationship between target according data.</p>
+<h2 id="data-structure">Data Structure</h2>
+<h3 id="network">Network</h3>
+<ul>
+<li>
+<p>Vertex / node</p>
 <blockquote>
-<p>其實安裝很簡單，照著<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >Github</a>上面的步驟去走就可以了</p>
+<p>Data point</p>
 </blockquote>
-<p>複製貼上就可以了</p>
-<pre><code>curl -fsSL https://code-server.dev/install.sh | sh
-</code></pre><p>code server有兩種連線方式，一種是透過SSH forwarding來連線，另一種是把這個服務公開到外網上</p>
-<h3 id="更換登入密碼">更換登入密碼</h3>
-<p>登入密碼寫在<code>~/.config/code-server/config.yaml</code>這個檔案裡面，去換成自己喜歡的吧～</p>
-<h3 id="nginx設定">Nginx設定</h3>
-<p>下面是範例的conf內容，比較要注意的是因為code server有使用web socket，所以要加上跟web socket有關的設定。</p>
-<pre><code>server {
-    listen 80;
-    listen [::]:80;
-    server_name mydomain.com;
-
-    location / {
-      proxy_pass http://localhost:8080/;
-      proxy_set_header Host $host;
-      # for web socket
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection upgrade;
-      proxy_set_header Accept-Encoding gzip;
-    }
-}
-</code></pre><h3 id="重新啟動code-server">重新啟動code server</h3>
-<p><code>sudo systemctl restart code-server@$USER</code></p>
-<h3 id="要用在ipad上必須要做的事">要用在iPad上必須要做的事</h3>
+</li>
+<li>
+<p>Arc / edge</p>
 <blockquote>
-<p>必須要有HTTPS、必須要有HTTPS、必須要有HTTPS，很重要所以說三次</p>
+<p>Line which connect vertex/node and show relation between them</p>
 </blockquote>
-<h4 id="cloudflare的半套呢">CloudFlare的半套呢？</h4>
-<p>在使用Let&rsquo;s Encrypt之前我是用CloudFlare提供的半套HTTPS，也就是說從瀏覽器到CloudFlare之間有保護，從CloudFlare到伺服器是沒保護的，這個做法在windows跟macOS上是沒有問題的，<br>
-<strong>罷特</strong>！當要從iPadOS上使用這個服務的時候，會沒辦法建立web socket的連線，所以還是得乖乖用憑證啦～</p>
-<h2 id="後話">後話</h2>
-<p>在設定完code server後就馬上用他來寫了一個小專案，不得不說把開發環境放在伺服器上還是比較方便，不用怕連線不穩定、還可以有固定IP。另外在iPad上寫程式的體驗說實在的還不錯，不過長時間或開發大型專案可能會<del>不好抄code</del>有點吃力，重點是，我好想買鍵盤RRRRRR。</p>
-<p>最近的大新聞就是以後的mac要換成arm架構了，期待會有更多具有生產力的軟體可以在iPad上使用到。</p>
-<h2 id="reference">Reference</h2>
-<p><a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
-    >https://github.com/cdr/code-server</a></p>
+</li>
+</ul>
+<h3 id="partition">Partition</h3>
+<blockquote>
+<p>Sort of <strong>vertex/node</strong></p>
+</blockquote>
+<h3 id="vector">Vector</h3>
+<blockquote>
+<p>a list of nodes with values</p>
+</blockquote>
+<p><strong>Ex</strong>: Degree of nodes</p>
+<h2 id="export-to-other-application">Export to other application</h2>
+<p>Pajek provide tools help us to export the result to other application or programming, such as Excel, R, SPSS.</p>
+<h3 id="usage">Usage</h3>
+<p><code>Tools -&gt; (Choose the application)</code></p>
+<p><img src="https://i.imgur.com/UeZ5Djg.png" alt=""  /></p>
+<h2 id="centrality">Centrality</h2>
+<p>How <strong>node</strong> important is in the network</p>
+<h3 id="degreeweighted-degree-centrality">Degree/weighted degree centrality</h3>
+<blockquote>
+<p>Degree centrality represents how many nodes the target node connect.</p>
+<p><strong>Meaning</strong>: influence of target node.</p>
+</blockquote>
+<h4 id="calculate">Calculate</h4>
+<blockquote>
+<p>degree = in-degree + out-degree = 2 + 4 = 6</p>
+<p>weighted degree = weighted in-degree + weighted out-degree</p>
+</blockquote>
+<p><img src="https://i.imgur.com/7Kkge0Q.png" alt=""  /></p>
+<ul>
+<li>
+<p>In-degree</p>
+<p>In patent citation network in-degree means <strong>backward citation</strong></p>
+</li>
+<li>
+<p>Out-degree</p>
+<p>In patent citation network in-degree means <strong>forward citation</strong></p>
+</li>
+</ul>
+<h4 id="meaning-in-patent-citation-network">Meaning in patent citation network</h4>
+<p>Out-degree and in-degree have different meaning, usually observe respectively.</p>
+<ul>
+<li>Out-degree is high =&gt; patent is <strong>influential</strong> in the development of follow-up technology</li>
+<li>In-degree is high =&gt; patent</li>
+</ul>
+<hr>
+<h3 id="betweenness-centrality">Betweenness centrality</h3>
+<blockquote>
+<p>Betweenness centrality represents the importance of target node&rsquo;s position.</p>
+<p><strong>Meaning</strong>: Is the target node in the <strong>key position</strong>?</p>
+</blockquote>
+<h4 id="calculate-1">Calculate</h4>
+<h5 id="formula">Formula</h5>
+<p>For each pair of nodes in network</p>
+<p>$$<br>
+\sum \frac{Number\ of\ shortest\ path\ from\ one\ to\ other\ one\ via\ target\ node}{Number\ of\ shortest\ path\ from\ one\ to\ other\ one}<br>
+$$</p>
+<h5 id="example">Example</h5>
+<p><img src="https://i.imgur.com/dxEAblq.png" alt=""  /></p>
+<ol>
+<li>Target node: 3</li>
+<li>1-4, 2-4, 4-5, 4-6, 4-7: <strong>1 / 1 = 1</strong></li>
+<li>1-5, 1-5, 1-7: <strong>1 / 2 = 0.5</strong></li>
+<li><strong>1*5 + 0.5*3 = 6.5</strong></li>
+</ol>
+<hr>
+<h3 id="closeness-centrality">Closeness centrality</h3>
+<blockquote>
+<p>Closeness centrality represents how close the target node with each others is?</p>
+<p><strong>Meaning</strong>: How the target node close to the center of the network?</p>
+</blockquote>
+<h4 id="calculate-2">Calculate</h4>
+<h5 id="formula-1">Formula</h5>
+<p>$$<br>
+\sum\frac{1}{Average\ of\ shortest\ path\ from\ target\ node\ to\ other\ node}<br>
+$$</p>
+<hr>
+<h3 id="calculate-centrality-with-pajek">Calculate centrality with Pajek</h3>
+<h4 id="create">Create</h4>
+<p>Pajek calculate value of each node and store in <strong>vector</strong></p>
+<p><code>Network -&gt; Create Vector -&gt; Centrality -&gt; (Choose Degree/Closeness/Betweenness)</code></p>
+<h4 id="sorted1563174935601httpsiimgurcomyubzkpbpng">Sorted<img src="https://i.imgur.com/YUbzkpb.png" alt="1563174935601"  /></h4>
+<hr>
+<h2 id="patent-island-partition-by-line-weight">Patent Island (Partition by line weight)</h2>
+<blockquote>
+<p>Put similar patent together for further analysis</p>
+<p>Ex: Patents have similar IPC/CPC number or keywords</p>
+</blockquote>
+<h3 id="filter">Filter</h3>
+<p>Kick out irrelevant patents. For instance, patents have no connect with other patents.</p>
+<h5 id="usage-1">Usage</h5>
+<p><code>Network -&gt; Create Partition -&gt; Islands -&gt; Line Weights</code></p>
+<h2 id="link">Link</h2>
+<p><a class="link" href="http://mrvar.fdv.uni-lj.si/pajek/"  target="_blank" rel="noopener"
+    >http://mrvar.fdv.uni-lj.si/pajek/</a></p>
+<h2 id="manual-book">Manual Book</h2>
+<ul>
+<li><a class="link" href="https://www.cambridge.org/core/books/exploratory-social-network-analysis-with-pajek/6F8EE2512CB7C6D233DB2DAC3886D4F5"  target="_blank" rel="noopener"
+    >Exploratory Social Network Analysis with Pajek</a></li>
+</ul>
 </section>
 
 
@@ -300,7 +369,9 @@ if (!doNotTrack) {
     
     <section class="article-tags">
         
-            <a href="/tags/programming/">Programming</a>
+            <a href="/tags/pajek/">Pajek</a>
+        
+            <a href="/tags/patent/">Patent</a>
         
     </section>
 
@@ -317,19 +388,7 @@ if (!doNotTrack) {
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    <section class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <span class="article-time--modified">
-            Last updated on Nov 15, 2020 23:28 CST
-        </span>
-    </section></footer>
+    </footer>
 
     
 </article>

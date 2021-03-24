@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pajek on Yu-Cheng Chen&#39;s blog</title>
+    <link>https://blog.yzchen.tw/tags/pajek/</link>
+    <description>Recent content in Pajek on Yu-Cheng Chen&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 16 Jul 2019 12:57:55 +0800</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/pajek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pajek Learning</title>
+      <link>https://blog.yzchen.tw/p/pajek/</link>
+      <pubDate>Tue, 16 Jul 2019 12:57:55 +0800</pubDate>
+      
+      <guid>https://blog.yzchen.tw/p/pajek/</guid>
+      <description>&lt;p&gt;Pajek is a visualize application. It usually used to show the relationship between target according data.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -222,7 +222,7 @@ $$&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>code server 與 iPadOS: 多一個買iPad的理由</title>
+        <title>Code server 與 iPadOS: 多一個買iPad的理由</title>
         <link>https://blog.yzchen.tw/p/codeserver/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
         
@@ -276,6 +276,128 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cdr/code-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/cdr/code-server&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Pajek Learning</title>
+        <link>https://blog.yzchen.tw/p/pajek/</link>
+        <pubDate>Tue, 16 Jul 2019 12:57:55 +0800</pubDate>
+        
+        <guid>https://blog.yzchen.tw/p/pajek/</guid>
+        <description>&lt;p&gt;Pajek is a visualize application. It usually used to show the relationship between target according data.&lt;/p&gt;
+&lt;h2 id=&#34;data-structure&#34;&gt;Data Structure&lt;/h2&gt;
+&lt;h3 id=&#34;network&#34;&gt;Network&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vertex / node&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data point&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Arc / edge&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Line which connect vertex/node and show relation between them&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;partition&#34;&gt;Partition&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sort of &lt;strong&gt;vertex/node&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;vector&#34;&gt;Vector&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a list of nodes with values&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Ex&lt;/strong&gt;: Degree of nodes&lt;/p&gt;
+&lt;h2 id=&#34;export-to-other-application&#34;&gt;Export to other application&lt;/h2&gt;
+&lt;p&gt;Pajek provide tools help us to export the result to other application or programming, such as Excel, R, SPSS.&lt;/p&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Tools -&amp;gt; (Choose the application)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/UeZ5Djg.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;centrality&#34;&gt;Centrality&lt;/h2&gt;
+&lt;p&gt;How &lt;strong&gt;node&lt;/strong&gt; important is in the network&lt;/p&gt;
+&lt;h3 id=&#34;degreeweighted-degree-centrality&#34;&gt;Degree/weighted degree centrality&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Degree centrality represents how many nodes the target node connect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meaning&lt;/strong&gt;: influence of target node.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;calculate&#34;&gt;Calculate&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;degree = in-degree + out-degree = 2 + 4 = 6&lt;/p&gt;
+&lt;p&gt;weighted degree = weighted in-degree + weighted out-degree&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/7Kkge0Q.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In-degree&lt;/p&gt;
+&lt;p&gt;In patent citation network in-degree means &lt;strong&gt;backward citation&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Out-degree&lt;/p&gt;
+&lt;p&gt;In patent citation network in-degree means &lt;strong&gt;forward citation&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;meaning-in-patent-citation-network&#34;&gt;Meaning in patent citation network&lt;/h4&gt;
+&lt;p&gt;Out-degree and in-degree have different meaning, usually observe respectively.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Out-degree is high =&amp;gt; patent is &lt;strong&gt;influential&lt;/strong&gt; in the development of follow-up technology&lt;/li&gt;
+&lt;li&gt;In-degree is high =&amp;gt; patent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;betweenness-centrality&#34;&gt;Betweenness centrality&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Betweenness centrality represents the importance of target node&amp;rsquo;s position.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meaning&lt;/strong&gt;: Is the target node in the &lt;strong&gt;key position&lt;/strong&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;calculate-1&#34;&gt;Calculate&lt;/h4&gt;
+&lt;h5 id=&#34;formula&#34;&gt;Formula&lt;/h5&gt;
+&lt;p&gt;For each pair of nodes in network&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;
+\sum \frac{Number\ of\ shortest\ path\ from\ one\ to\ other\ one\ via\ target\ node}{Number\ of\ shortest\ path\ from\ one\ to\ other\ one}&lt;br&gt;
+$$&lt;/p&gt;
+&lt;h5 id=&#34;example&#34;&gt;Example&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/dxEAblq.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Target node: 3&lt;/li&gt;
+&lt;li&gt;1-4, 2-4, 4-5, 4-6, 4-7: &lt;strong&gt;1 / 1 = 1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;1-5, 1-5, 1-7: &lt;strong&gt;1 / 2 = 0.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1*5 + 0.5*3 = 6.5&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;closeness-centrality&#34;&gt;Closeness centrality&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Closeness centrality represents how close the target node with each others is?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Meaning&lt;/strong&gt;: How the target node close to the center of the network?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;calculate-2&#34;&gt;Calculate&lt;/h4&gt;
+&lt;h5 id=&#34;formula-1&#34;&gt;Formula&lt;/h5&gt;
+&lt;p&gt;$$&lt;br&gt;
+\sum\frac{1}{Average\ of\ shortest\ path\ from\ target\ node\ to\ other\ node}&lt;br&gt;
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;calculate-centrality-with-pajek&#34;&gt;Calculate centrality with Pajek&lt;/h3&gt;
+&lt;h4 id=&#34;create&#34;&gt;Create&lt;/h4&gt;
+&lt;p&gt;Pajek calculate value of each node and store in &lt;strong&gt;vector&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Network -&amp;gt; Create Vector -&amp;gt; Centrality -&amp;gt; (Choose Degree/Closeness/Betweenness)&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;sorted1563174935601httpsiimgurcomyubzkpbpng&#34;&gt;Sorted&lt;img src=&#34;https://i.imgur.com/YUbzkpb.png&#34; alt=&#34;1563174935601&#34;  /&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;patent-island-partition-by-line-weight&#34;&gt;Patent Island (Partition by line weight)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Put similar patent together for further analysis&lt;/p&gt;
+&lt;p&gt;Ex: Patents have similar IPC/CPC number or keywords&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;filter&#34;&gt;Filter&lt;/h3&gt;
+&lt;p&gt;Kick out irrelevant patents. For instance, patents have no connect with other patents.&lt;/p&gt;
+&lt;h5 id=&#34;usage-1&#34;&gt;Usage&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;Network -&amp;gt; Create Partition -&amp;gt; Islands -&amp;gt; Line Weights&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;link&#34;&gt;Link&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://mrvar.fdv.uni-lj.si/pajek/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://mrvar.fdv.uni-lj.si/pajek/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;manual-book&#34;&gt;Manual Book&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.cambridge.org/core/books/exploratory-social-network-analysis-with-pajek/6F8EE2512CB7C6D233DB2DAC3886D4F5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Exploratory Social Network Analysis with Pajek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         <item>
         <title>Metar意義簡介與編碼對照</title>

@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/aviation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Type of Airspeed 空速的種類</title>
-      <link>https://blog.yzchen.tw/post/airspeed/</link>
+      <link>https://blog.yzchen.tw/p/airspeed/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.yzchen.tw/post/airspeed/</guid>
+      <guid>https://blog.yzchen.tw/p/airspeed/</guid>
       <description>Type of Airspeed 空速的種類  V1, rotate, V2. Positive rate, gears up.
 上面這段話應該是所有航空人最熟悉的話了，當中V1是決斷速度，代表能夠放棄起飛的最大速度，也就是說當你超過這個速度，剩餘的跑道長度將不夠讓飛機安全停下，只能硬著頭皮起飛。
 相較於開車或是騎車是在地面上，不同於固體，乘載著飛行器的載體是氣體，而氣體會根據溫度、濕度、高度的不同有不同的特性，因此就衍生出了不同種類的空速。
@@ -39,10 +39,10 @@ $$
     
     <item>
       <title>Metar意義簡介與編碼對照</title>
-      <link>https://blog.yzchen.tw/post/metar/</link>
+      <link>https://blog.yzchen.tw/p/metar/</link>
       <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
       
-      <guid>https://blog.yzchen.tw/post/metar/</guid>
+      <guid>https://blog.yzchen.tw/p/metar/</guid>
       <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     

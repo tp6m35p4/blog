@@ -15,16 +15,19 @@
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-143004637-2', 'auto');
 	
 	ga('send', 'pageview');
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
     </head>
-    <body class="">
+    <body class="
+    article-page has-toc
+">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -41,173 +44,32 @@ if (!doNotTrack) {
         if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
 
-            document.body.dataset.scheme = 'dark';
+            document.documentElement.dataset.scheme = 'dark';
         } else {
-            document.body.dataset.scheme = 'light';
+            document.documentElement.dataset.scheme = 'light';
         }
     })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            <figure class="site-avatar">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/me_huddb9c0e220083761bb5aa1641e30f46a_629401_300x0_resize_box_2.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-
-                
-                    <span class="emoji">🥰</span>
-                
-            </figure>
-        
-        <h1 class="site-name"><a href="https://blog.yzchen.tw">白白的飛行箱</a></h1>
-        <h2 class="site-description">Thinking gives the way to practice.</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>Home</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/about/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>About</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/archives/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="4" rx="2" />
-  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-  <line x1="10" y1="12" x2="14" y2="12" />
-</svg>
-
-
-
-                
-                <span>Archives</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/categories/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="6" rx="2" />
-
-  <rect x="3" y="14" width="18" height="6" rx="2" />
-</svg>
-                
-                <span>Categories</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/search/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-                
-                <span>Search</span>
-            </a>
-        </li>
-        
-
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <span>Dark Mode</span>
-            </li>
-        
-    </ol>
-</aside>
-
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://blog.yzchen.tw" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />
 </svg>
 
 
 
-            <span>Back</span>
-        </a>
-    </div>
-
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
     <article class="main-article">
     <header class="article-header">
 
@@ -230,8 +92,28 @@ if (!doNotTrack) {
     <h3 class="article-subtitle">
         空速百百種，哪種最合用
     </h3>
+    
+
+    
     <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 25, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="12" cy="12" r="9" />
   <polyline points="12 7 12 12 15 15" />
@@ -239,8 +121,14 @@ if (!doNotTrack) {
 
 
 
-        <time class="article-time--published">Nov 25, 2020</time>
-    </footer></div>
+                <time class="article-time--reading">
+                    閱讀時間: 2 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
 
     <section class="article-content">
@@ -269,36 +157,50 @@ if (!doNotTrack) {
 <p>飛行器飛行速度與音速的比例，在高空高速的情況下較具參考性。</p>
 <p>目前一般的民航機的真空速換算下來都不會超過1馬赫，也就是不會超過音速，因此屬於次音速(subsonic)的飛行器。</p>
 <h2 id="空速間的關係">空速間的關係</h2>
-<p><figure style="flex-grow: 334; flex-basis: 802px">
-		<a href="/p/airspeed/relationship.png" data-size="1912x572"><img src="/p/airspeed/relationship.png"
-				srcset="/p/airspeed/relationship_hu0dc1fdce19a795007503487170aaddaf_104327_480x0_resize_box_2.png 480w, /p/airspeed/relationship_hu0dc1fdce19a795007503487170aaddaf_104327_1024x0_resize_box_2.png 1024w"
-				width="1912"
-				height="572"
-				loading="lazy"
-				alt="Relationship">
-		</a>
-		
-		<figcaption>Relationship</figcaption>
-		
-	</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 334; 
+			flex-basis: 802px"
+	>
+	<a href="/p/airspeed/relationship.png" data-size="1912x572">
+		<img src="/p/airspeed/relationship.png"
+			width="1912"
+			height="572"
+			srcset="/p/airspeed/relationship_hu0dc1fdce19a795007503487170aaddaf_104327_480x0_resize_box_3.png 480w, /p/airspeed/relationship_hu0dc1fdce19a795007503487170aaddaf_104327_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="Relationship">
+	</a>
+	
+	<figcaption>Relationship</figcaption>
+	
+</figure></p>
 <h2 id="儀表">儀表</h2>
 <p>這張是737的PFD(左邊)以及MFD(右邊)，可以看到不同空速出現的位置，不同的位置也代表著在飛行當中的重要性，像是指示空速(IAS)就出在PFD上面，代表在飛行過程中是很重要的參考數據。</p>
 <p>另外在MFD可以看到有顯示地速、真空速與風向/風速，地速是真空速加上行徑方向的風速分量，在這裡可以粗略的計算<br>
 $$<br>
 337 + (cos(252-180-1)*21)=344<br>
 $$</p>
-<p><figure style="flex-grow: 135; flex-basis: 325px">
-		<a href="/p/airspeed/fd.png" data-size="1274x938"><img src="/p/airspeed/fd.png"
-				srcset="/p/airspeed/fd_huec97d3f04a87af434607b9bd8a7c1ce6_1178858_480x0_resize_box_2.png 480w, /p/airspeed/fd_huec97d3f04a87af434607b9bd8a7c1ce6_1178858_1024x0_resize_box_2.png 1024w"
-				width="1274"
-				height="938"
-				loading="lazy"
-				alt="Flight Director">
-		</a>
-		
-		<figcaption>Flight Director</figcaption>
-		
-	</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 135; 
+			flex-basis: 325px"
+	>
+	<a href="/p/airspeed/fd.png" data-size="1274x938">
+		<img src="/p/airspeed/fd.png"
+			width="1274"
+			height="938"
+			srcset="/p/airspeed/fd_huec97d3f04a87af434607b9bd8a7c1ce6_1178858_480x0_resize_box_3.png 480w, /p/airspeed/fd_huec97d3f04a87af434607b9bd8a7c1ce6_1178858_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			alt="Flight Director">
+	</a>
+	
+	<figcaption>Flight Director</figcaption>
+	
+</figure></p>
 <h2 id="測量">測量</h2>
 <p>It&rsquo;s all about pressure.</p>
 <h3 id="皮托管-pitot-tube">皮托管 Pitot tube</h3>
@@ -416,18 +318,25 @@ $$</p>
 <p>在高速時，空氣的被壓縮量較大，所以跟校正空速(CAS)的誤差也會變大。</p>
 <h4 id="真空速-tas">真空速 TAS</h4>
 <p>真空速(TAS)會隨著高度增加而比校正空速(CAS)大得越多，因為在高空中空氣密度較小，若需維持相同之校正空速(CAS)，也就是相同的衝壓(dynamic pressure)，則需要與空氣粒子保持更大的相對速度，所以真空速(TAS)也就越快啦。</p>
-<p><figure style="flex-grow: 108; flex-basis: 259px">
-		<a href="/p/airspeed/EAS-CAS-IAS-TAS.jpg" data-size="856x791"><img src="/p/airspeed/EAS-CAS-IAS-TAS.jpg"
-				srcset="/p/airspeed/EAS-CAS-IAS-TAS_hue30a17aed2220fd7a9cfeca103900bcd_91554_480x0_resize_q75_box.jpg 480w, /p/airspeed/EAS-CAS-IAS-TAS_hue30a17aed2220fd7a9cfeca103900bcd_91554_1024x0_resize_q75_box.jpg 1024w"
-				width="856"
-				height="791"
-				loading="lazy"
-				alt="EAS-CAS-IAS-TAS">
-		</a>
-		
-		<figcaption>EAS-CAS-IAS-TAS</figcaption>
-		
-	</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 108; 
+			flex-basis: 259px"
+	>
+	<a href="/p/airspeed/EAS-CAS-IAS-TAS.jpg" data-size="856x791">
+		<img src="/p/airspeed/EAS-CAS-IAS-TAS.jpg"
+			width="856"
+			height="791"
+			srcset="/p/airspeed/EAS-CAS-IAS-TAS_hue30a17aed2220fd7a9cfeca103900bcd_91554_480x0_resize_q75_box.jpg 480w, /p/airspeed/EAS-CAS-IAS-TAS_hue30a17aed2220fd7a9cfeca103900bcd_91554_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			alt="EAS-CAS-IAS-TAS">
+	</a>
+	
+	<figcaption>EAS-CAS-IAS-TAS</figcaption>
+	
+</figure></p>
 <h2 id="大概的計算">大概的計算</h2>
 <blockquote>
 <p>飛行當中會有很多速算法來幫助飛行員快速取得誤差小的數值</p>
@@ -478,13 +387,14 @@ $$</p>
     </section>
     </footer>
 
+
     
 </article>
 
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title">相關文章</h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -505,51 +415,9 @@ $$</p>
     
 </aside>
 
-
+     
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "blog-90lrr5iqaq" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
     
 
     <footer class="site-footer">
@@ -563,9 +431,12 @@ $$</p>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     
@@ -642,7 +513,70 @@ $$</p>
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
             >
+
             </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目錄</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#種類">種類</a>
+      <ul>
+        <li><a href="#indicated-airspeed-ias-測量空速指示空速">Indicated Airspeed, IAS 測量空速/指示空速</a></li>
+        <li><a href="#calibrated-airspeed-cas-校正空速">Calibrated Airspeed, CAS 校正空速</a></li>
+        <li><a href="#equivalent-airspeed-eas-等效空速">Equivalent Airspeed, EAS 等效空速</a></li>
+        <li><a href="#true-airspeed-tas-真空速">True Airspeed, TAS 真空速</a></li>
+        <li><a href="#ground-speed-gs-地速">Ground Speed, GS 地速</a></li>
+        <li><a href="#mach-number-馬赫數">Mach number 馬赫數</a></li>
+      </ul>
+    </li>
+    <li><a href="#空速間的關係">空速間的關係</a></li>
+    <li><a href="#儀表">儀表</a></li>
+    <li><a href="#測量">測量</a>
+      <ul>
+        <li><a href="#皮托管-pitot-tube">皮托管 Pitot tube</a></li>
+        <li><a href="#靜壓孔-static-port">靜壓孔 Static port</a></li>
+      </ul>
+    </li>
+    <li><a href="#計算">計算</a>
+      <ul>
+        <li><a href="#ias-測量空速">IAS 測量空速</a></li>
+        <li><a href="#cas-修正空速">CAS 修正空速</a></li>
+        <li><a href="#eas-等效空速">EAS 等效空速</a></li>
+        <li><a href="#mach-number馬赫數">Mach number馬赫數</a></li>
+        <li><a href="#tas-真空速">TAS 真空速</a></li>
+        <li><a href="#gs-地速">GS 地速</a></li>
+        <li><a href="#圖表">圖表</a></li>
+      </ul>
+    </li>
+    <li><a href="#大概的計算">大概的計算</a>
+      <ul>
+        <li><a href="#tas-真空速-1">TAS 真空速</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
         </div>
         <script 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"

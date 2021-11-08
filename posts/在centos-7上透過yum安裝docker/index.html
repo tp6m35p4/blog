@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='這個教學是用於安裝Docker CE於CentOS 7上。
+'><title>在CentOS 7上透過yum安裝Docker</title>
+
+<link rel='canonical' href='https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='在CentOS 7上透過yum安裝Docker'>
+<meta property='og:description' content='這個教學是用於安裝Docker CE於CentOS 7上。
+'>
+<meta property='og:url' content='https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/'>
+<meta property='og:site_name' content='白白的飛行箱'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='Centos7' /><meta property='article:tag' content='Programming' /><meta property='article:published_time' content='2019-06-29T13:49:32&#43;08:00'/><meta property='article:modified_time' content='2019-06-29T13:49:32&#43;08:00'/>
+<meta name="twitter:title" content="在CentOS 7上透過yum安裝Docker">
+<meta name="twitter:description" content="這個教學是用於安裝Docker CE於CentOS 7上。
+">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-143004637-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming/" style="background-color: #e6b547; color: #fff;">
+                Programming
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/">在CentOS 7上透過yum安裝Docker</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 29, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 1 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>這個教學是用於安裝Docker CE於CentOS 7上。</p>
+<h2 id="第0步-移除舊版">第0步 移除舊版</h2>
+<p>這個步驟用於移除作業系統上舊版的Docker，就算你不確定你的作業系統上有沒有安裝舊版Docker，可以運行以下的指令確保沒有存在舊版的Docker。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum remove docker <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-client <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-client-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-common <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-latest-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                    docker-engine
+</code></pre></div><h2 id="第1步-安裝必要軟體">第1步 安裝必要軟體</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum install -y yum-utils <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    device-mapper-persistent-data <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    lvm2
+</code></pre></div><h2 id="第2步-增加docker-repo到yum中">第2步 增加Docker Repo到yum中</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum-config-manager <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --add-repo <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div><h2 id="第3步-安裝docker-ce">第3步 安裝Docker CE</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre></div><h2 id="第4步-啟動docker">第4步 啟動Docker</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl start docker
+</code></pre></div><h2 id="完成">完成</h2>
+<p>到這裡已經完成Docker的安裝，接下來為不一定需要做的步驟，但是是我在安裝完後一定會做的步驟</p>
+<h2 id="預設開機自動啟動docker">預設開機自動啟動Docker</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo systemctl enable docker
+</code></pre></div><h2 id="設定為可以不用透過root就可以管理docker">設定為可以不用透過root就可以管理Docker</h2>
+<p>新增docker使用者群組</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo groupadd docker
+</code></pre></div><p>將目前登入的使用者加進去</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo usermod -aG docker $USER
+</code></pre></div><h2 id="驗證">驗證</h2>
+<p>透過運行docker hello-world映象檔來驗證Docker是否安裝成功</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ sudo docker run hello-world
+//沒有設定不用root就可以運行docker
+
+$ docker run hello-world
+//有設定不用root就可以運行docker
+</code></pre></div><h2 id="參考資料">參考資料</h2>
+<blockquote>
+<p><a class="link" href="https://docs.docker.com/install/linux/docker-ce/centos/"  target="_blank" rel="noopener"
+    ><strong>Get Docker CE for CentOS</strong></a></p>
+<p><a class="link" href="https://docs.docker.com/install/linux/linux-postinstall/"  target="_blank" rel="noopener"
+    ><strong>Post-installation steps for Linux</strong></a></p>
+</blockquote>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/centos7/">Centos7</a>
+        
+            <a href="/tags/programming/">Programming</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相關文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/codeserver/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Code server 與 iPadOS: 多一個買iPad的理由</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 白白的飛行箱
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目錄</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#第0步-移除舊版">第0步 移除舊版</a></li>
+    <li><a href="#第1步-安裝必要軟體">第1步 安裝必要軟體</a></li>
+    <li><a href="#第2步-增加docker-repo到yum中">第2步 增加Docker Repo到yum中</a></li>
+    <li><a href="#第3步-安裝docker-ce">第3步 安裝Docker CE</a></li>
+    <li><a href="#第4步-啟動docker">第4步 啟動Docker</a></li>
+    <li><a href="#完成">完成</a></li>
+    <li><a href="#預設開機自動啟動docker">預設開機自動啟動Docker</a></li>
+    <li><a href="#設定為可以不用透過root就可以管理docker">設定為可以不用透過root就可以管理Docker</a></li>
+    <li><a href="#驗證">驗證</a></li>
+    <li><a href="#參考資料">參考資料</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+    
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script>
+    MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+</html>

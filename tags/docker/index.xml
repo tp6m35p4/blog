@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 29 Jun 2019 13:49:32 +0800</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在CentOS 7上透過yum安裝Docker</title>
-      <link>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</link>
+      <link>https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</link>
       <pubDate>Sat, 29 Jun 2019 13:49:32 +0800</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</guid>
+      <guid>https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</guid>
       <description>&lt;p&gt;這個教學是用於安裝Docker CE於CentOS 7上。&lt;/p&gt;</description>
     </item>
     

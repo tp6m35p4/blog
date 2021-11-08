@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Pajek is a visualize application. It usually used to show the relationship between target according data.
+'><title>Pajek Learning</title>
+
+<link rel='canonical' href='https://blog.yzchen.tw/posts/pajek/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Pajek Learning'>
+<meta property='og:description' content='Pajek is a visualize application. It usually used to show the relationship between target according data.
+'>
+<meta property='og:url' content='https://blog.yzchen.tw/posts/pajek/'>
+<meta property='og:site_name' content='白白的飛行箱'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Pajek' /><meta property='article:tag' content='Patent' /><meta property='article:published_time' content='2019-07-16T12:57:55&#43;08:00'/><meta property='article:modified_time' content='2019-07-16T12:57:55&#43;08:00'/>
+<meta name="twitter:title" content="Pajek Learning">
+<meta name="twitter:description" content="Pajek is a visualize application. It usually used to show the relationship between target according data.
+">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-143004637-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/pajek/" >
+                Pajek
+            </a>
+        
+            <a href="/categories/patent/" >
+                Patent
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/pajek/">Pajek Learning</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 16, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 2 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>Pajek is a visualize application. It usually used to show the relationship between target according data.</p>
+<h2 id="data-structure">Data Structure</h2>
+<h3 id="network">Network</h3>
+<ul>
+<li>
+<p>Vertex / node</p>
+<blockquote>
+<p>Data point</p>
+</blockquote>
+</li>
+<li>
+<p>Arc / edge</p>
+<blockquote>
+<p>Line which connect vertex/node and show relation between them</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="partition">Partition</h3>
+<blockquote>
+<p>Sort of <strong>vertex/node</strong></p>
+</blockquote>
+<h3 id="vector">Vector</h3>
+<blockquote>
+<p>a list of nodes with values</p>
+</blockquote>
+<p><strong>Ex</strong>: Degree of nodes</p>
+<h2 id="export-to-other-application">Export to other application</h2>
+<p>Pajek provide tools help us to export the result to other application or programming, such as Excel, R, SPSS.</p>
+<h3 id="usage">Usage</h3>
+<p><code>Tools -&gt; (Choose the application)</code></p>
+<p><figure 
+	>
+	<a href="https://i.imgur.com/UeZ5Djg.png" >
+		<img src="https://i.imgur.com/UeZ5Djg.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h2 id="centrality">Centrality</h2>
+<p>How <strong>node</strong> important is in the network</p>
+<h3 id="degreeweighted-degree-centrality">Degree/weighted degree centrality</h3>
+<blockquote>
+<p>Degree centrality represents how many nodes the target node connect.</p>
+<p><strong>Meaning</strong>: influence of target node.</p>
+</blockquote>
+<h4 id="calculate">Calculate</h4>
+<blockquote>
+<p>degree = in-degree + out-degree = 2 + 4 = 6</p>
+<p>weighted degree = weighted in-degree + weighted out-degree</p>
+</blockquote>
+<p><figure 
+	>
+	<a href="https://i.imgur.com/7Kkge0Q.png" >
+		<img src="https://i.imgur.com/7Kkge0Q.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p>In-degree</p>
+<p>In patent citation network in-degree means <strong>backward citation</strong></p>
+</li>
+<li>
+<p>Out-degree</p>
+<p>In patent citation network in-degree means <strong>forward citation</strong></p>
+</li>
+</ul>
+<h4 id="meaning-in-patent-citation-network">Meaning in patent citation network</h4>
+<p>Out-degree and in-degree have different meaning, usually observe respectively.</p>
+<ul>
+<li>Out-degree is high =&gt; patent is <strong>influential</strong> in the development of follow-up technology</li>
+<li>In-degree is high =&gt; patent</li>
+</ul>
+<hr>
+<h3 id="betweenness-centrality">Betweenness centrality</h3>
+<blockquote>
+<p>Betweenness centrality represents the importance of target node&rsquo;s position.</p>
+<p><strong>Meaning</strong>: Is the target node in the <strong>key position</strong>?</p>
+</blockquote>
+<h4 id="calculate-1">Calculate</h4>
+<h5 id="formula">Formula</h5>
+<p>For each pair of nodes in network</p>
+<p>$$<br>
+\sum \frac{Number\ of\ shortest\ path\ from\ one\ to\ other\ one\ via\ target\ node}{Number\ of\ shortest\ path\ from\ one\ to\ other\ one}<br>
+$$</p>
+<h5 id="example">Example</h5>
+<p><figure 
+	>
+	<a href="https://i.imgur.com/dxEAblq.png" >
+		<img src="https://i.imgur.com/dxEAblq.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ol>
+<li>Target node: 3</li>
+<li>1-4, 2-4, 4-5, 4-6, 4-7: <strong>1 / 1 = 1</strong></li>
+<li>1-5, 1-5, 1-7: <strong>1 / 2 = 0.5</strong></li>
+<li><strong>1*5 + 0.5*3 = 6.5</strong></li>
+</ol>
+<hr>
+<h3 id="closeness-centrality">Closeness centrality</h3>
+<blockquote>
+<p>Closeness centrality represents how close the target node with each others is?</p>
+<p><strong>Meaning</strong>: How the target node close to the center of the network?</p>
+</blockquote>
+<h4 id="calculate-2">Calculate</h4>
+<h5 id="formula-1">Formula</h5>
+<p>$$<br>
+\sum\frac{1}{Average\ of\ shortest\ path\ from\ target\ node\ to\ other\ node}<br>
+$$</p>
+<hr>
+<h3 id="calculate-centrality-with-pajek">Calculate centrality with Pajek</h3>
+<h4 id="create">Create</h4>
+<p>Pajek calculate value of each node and store in <strong>vector</strong></p>
+<p><code>Network -&gt; Create Vector -&gt; Centrality -&gt; (Choose Degree/Closeness/Betweenness)</code></p>
+<h4 id="sorted1563174935601httpsiimgurcomyubzkpbpng">Sorted<figure 
+	>
+	<a href="https://i.imgur.com/YUbzkpb.png" >
+		<img src="https://i.imgur.com/YUbzkpb.png"
+			
+			
+			
+			loading="lazy"
+			alt="1563174935601">
+	</a>
+	
+	<figcaption>1563174935601</figcaption>
+	
+</figure></h4>
+<hr>
+<h2 id="patent-island-partition-by-line-weight">Patent Island (Partition by line weight)</h2>
+<blockquote>
+<p>Put similar patent together for further analysis</p>
+<p>Ex: Patents have similar IPC/CPC number or keywords</p>
+</blockquote>
+<h3 id="filter">Filter</h3>
+<p>Kick out irrelevant patents. For instance, patents have no connect with other patents.</p>
+<h5 id="usage-1">Usage</h5>
+<p><code>Network -&gt; Create Partition -&gt; Islands -&gt; Line Weights</code></p>
+<h2 id="link">Link</h2>
+<p><a class="link" href="http://mrvar.fdv.uni-lj.si/pajek/"  target="_blank" rel="noopener"
+    >http://mrvar.fdv.uni-lj.si/pajek/</a></p>
+<h2 id="manual-book">Manual Book</h2>
+<ul>
+<li><a class="link" href="https://www.cambridge.org/core/books/exploratory-social-network-analysis-with-pajek/6F8EE2512CB7C6D233DB2DAC3886D4F5"  target="_blank" rel="noopener"
+    >Exploratory Social Network Analysis with Pajek</a></li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/pajek/">Pajek</a>
+        
+            <a href="/tags/patent/">Patent</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 白白的飛行箱
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目錄</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-structure">Data Structure</a>
+      <ul>
+        <li><a href="#network">Network</a></li>
+        <li><a href="#partition">Partition</a></li>
+        <li><a href="#vector">Vector</a></li>
+      </ul>
+    </li>
+    <li><a href="#export-to-other-application">Export to other application</a>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+      </ul>
+    </li>
+    <li><a href="#centrality">Centrality</a>
+      <ul>
+        <li><a href="#degreeweighted-degree-centrality">Degree/weighted degree centrality</a></li>
+        <li><a href="#betweenness-centrality">Betweenness centrality</a></li>
+        <li><a href="#closeness-centrality">Closeness centrality</a></li>
+        <li><a href="#calculate-centrality-with-pajek">Calculate centrality with Pajek</a></li>
+      </ul>
+    </li>
+    <li><a href="#patent-island-partition-by-line-weight">Patent Island (Partition by line weight)</a>
+      <ul>
+        <li><a href="#filter">Filter</a></li>
+      </ul>
+    </li>
+    <li><a href="#link">Link</a></li>
+    <li><a href="#manual-book">Manual Book</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+    
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script>
+    MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+</html>

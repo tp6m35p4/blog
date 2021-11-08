@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Type of Airspeed 空速的種類</title>
-      <link>https://blog.yzchen.tw/p/airspeed/</link>
+      <link>https://blog.yzchen.tw/posts/airspeed/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/airspeed/</guid>
+      <guid>https://blog.yzchen.tw/posts/airspeed/</guid>
       <description>Type of Airspeed 空速的種類  V1, rotate, V2. Positive rate, gears up.
 上面這段話應該是所有航空人最熟悉的話了，當中V1是決斷速度，代表能夠放棄起飛的最大速度，也就是說當你超過這個速度，剩餘的跑道長度將不夠讓飛機安全停下，只能硬著頭皮起飛。
 相較於開車或是騎車是在地面上，不同於固體，乘載著飛行器的載體是氣體，而氣體會根據溫度、濕度、高度的不同有不同的特性，因此就衍生出了不同種類的空速。
@@ -39,37 +39,37 @@ $$
     
     <item>
       <title>Code server 與 iPadOS: 多一個買iPad的理由</title>
-      <link>https://blog.yzchen.tw/p/codeserver/</link>
+      <link>https://blog.yzchen.tw/posts/codeserver/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/codeserver/</guid>
+      <guid>https://blog.yzchen.tw/posts/codeserver/</guid>
       <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pajek Learning</title>
-      <link>https://blog.yzchen.tw/p/pajek/</link>
+      <link>https://blog.yzchen.tw/posts/pajek/</link>
       <pubDate>Tue, 16 Jul 2019 12:57:55 +0800</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/pajek/</guid>
+      <guid>https://blog.yzchen.tw/posts/pajek/</guid>
       <description>&lt;p&gt;Pajek is a visualize application. It usually used to show the relationship between target according data.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Metar意義簡介與編碼對照</title>
-      <link>https://blog.yzchen.tw/p/metar/</link>
+      <link>https://blog.yzchen.tw/posts/metar/</link>
       <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/metar/</guid>
+      <guid>https://blog.yzchen.tw/posts/metar/</guid>
       <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在CentOS 7上透過yum安裝Docker</title>
-      <link>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</link>
+      <link>https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</link>
       <pubDate>Sat, 29 Jun 2019 13:49:32 +0800</pubDate>
       
-      <guid>https://blog.yzchen.tw/p/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</guid>
+      <guid>https://blog.yzchen.tw/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/</guid>
       <description>&lt;p&gt;這個教學是用於安裝Docker CE於CentOS 7上。&lt;/p&gt;</description>
     </item>
     

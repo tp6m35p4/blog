@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在iPadOS上用VS Code吧！'><title>Code server 與 iPadOS: 多一個買iPad的理由</title>
+
+<link rel='canonical' href='https://blog.yzchen.tw/posts/codeserver/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Code server 與 iPadOS: 多一個買iPad的理由'>
+<meta property='og:description' content='在iPadOS上用VS Code吧！'>
+<meta property='og:url' content='https://blog.yzchen.tw/posts/codeserver/'>
+<meta property='og:site_name' content='白白的飛行箱'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Programming' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2020-09-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-11-15T23:28:54&#43;08:00'/>
+<meta name="twitter:title" content="Code server 與 iPadOS: 多一個買iPad的理由">
+<meta name="twitter:description" content="在iPadOS上用VS Code吧！">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-143004637-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming/" style="background-color: #e6b547; color: #fff;">
+                Programming
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/codeserver/">Code server 與 iPadOS: 多一個買iPad的理由</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        在iPadOS上用VS Code吧！
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 09, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 1 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>在iPadOS上用VS Code吧！<!-- raw HTML omitted --></p>
+<h1 id="code-server-與-ipados-多一個買ipad的理由">code server 與 iPadOS: 多一個買iPad的理由</h1>
+<p>最近在找iPad Pro能夠發揮生產力的場景，於是就想到了code server</p>
+<h2 id="我用的環境">我用的環境</h2>
+<p>OS: centOS 7</p>
+<h2 id="code-server-是什麼">code server 是什麼</h2>
+<p>根據他們<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
+    >Github</a>上的敘述，他就是瀏覽器上的VS Code (VS Code in the browser)，其實就是可以透過瀏覽器去遠端到伺服器中的VS Code，更白話就是可以在網頁上寫程式啦。</p>
+<h2 id="code-server-的安裝">code server 的安裝</h2>
+<blockquote>
+<p>其實安裝很簡單，照著<a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
+    >Github</a>上面的步驟去走就可以了</p>
+</blockquote>
+<p>複製貼上就可以了</p>
+<pre tabindex="0"><code>curl -fsSL https://code-server.dev/install.sh | sh
+</code></pre><p>code server有兩種連線方式，一種是透過SSH forwarding來連線，另一種是把這個服務公開到外網上</p>
+<h3 id="更換登入密碼">更換登入密碼</h3>
+<p>登入密碼寫在<code>~/.config/code-server/config.yaml</code>這個檔案裡面，去換成自己喜歡的吧～</p>
+<h3 id="nginx設定">Nginx設定</h3>
+<p>下面是範例的conf內容，比較要注意的是因為code server有使用web socket，所以要加上跟web socket有關的設定。</p>
+<pre tabindex="0"><code>server {
+    listen 80;
+    listen [::]:80;
+    server_name mydomain.com;
+
+    location / {
+      proxy_pass http://localhost:8080/;
+      proxy_set_header Host $host;
+      # for web socket
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection upgrade;
+      proxy_set_header Accept-Encoding gzip;
+    }
+}
+</code></pre><h3 id="重新啟動code-server">重新啟動code server</h3>
+<p><code>sudo systemctl restart code-server@$USER</code></p>
+<h3 id="要用在ipad上必須要做的事">要用在iPad上必須要做的事</h3>
+<blockquote>
+<p>必須要有HTTPS、必須要有HTTPS、必須要有HTTPS，很重要所以說三次</p>
+</blockquote>
+<h4 id="cloudflare的半套呢">CloudFlare的半套呢？</h4>
+<p>在使用Let&rsquo;s Encrypt之前我是用CloudFlare提供的半套HTTPS，也就是說從瀏覽器到CloudFlare之間有保護，從CloudFlare到伺服器是沒保護的，這個做法在windows跟macOS上是沒有問題的，<br>
+<strong>罷特</strong>！當要從iPadOS上使用這個服務的時候，會沒辦法建立web socket的連線，所以還是得乖乖用憑證啦～</p>
+<h2 id="後話">後話</h2>
+<p>在設定完code server後就馬上用他來寫了一個小專案，不得不說把開發環境放在伺服器上還是比較方便，不用怕連線不穩定、還可以有固定IP。另外在iPad上寫程式的體驗說實在的還不錯，不過長時間或開發大型專案可能會<del>不好抄code</del>有點吃力，重點是，我好想買鍵盤RRRRRR。</p>
+<p>最近的大新聞就是以後的mac要換成arm架構了，期待會有更多具有生產力的軟體可以在iPad上使用到。</p>
+<h2 id="reference">Reference</h2>
+<p><a class="link" href="https://github.com/cdr/code-server"  target="_blank" rel="noopener"
+    >https://github.com/cdr/code-server</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/programming/">Programming</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最後更新 Nov 15, 2020 23:28 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">相關文章</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/%E5%9C%A8centos-7%E4%B8%8A%E9%80%8F%E9%81%8Eyum%E5%AE%89%E8%A3%9Ddocker/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在CentOS 7上透過yum安裝Docker</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2019 - 
+        
+        2021 白白的飛行箱
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目錄</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#我用的環境">我用的環境</a></li>
+    <li><a href="#code-server-是什麼">code server 是什麼</a></li>
+    <li><a href="#code-server-的安裝">code server 的安裝</a>
+      <ul>
+        <li><a href="#更換登入密碼">更換登入密碼</a></li>
+        <li><a href="#nginx設定">Nginx設定</a></li>
+        <li><a href="#重新啟動code-server">重新啟動code server</a></li>
+        <li><a href="#要用在ipad上必須要做的事">要用在iPad上必須要做的事</a></li>
+      </ul>
+    </li>
+    <li><a href="#後話">後話</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+    
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script>
+    MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+</html>

@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.yzchen.tw/categories/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/post/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/tags/sleep/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/categories/sleep/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/tags/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/tags/zhuangzi/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.yzchen.tw/posts/sleep-1/</loc>
+    <lastmod>2021-11-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.yzchen.tw/about/</loc>
     <lastmod>2021-03-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/page/</loc>
     <lastmod>2021-03-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.yzchen.tw/</loc>
-    <lastmod>2021-03-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.yzchen.tw/tags/aviation/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/categories/aviation/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/categories/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/post/</loc>
-    <lastmod>2020-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.yzchen.tw/tags/</loc>
     <lastmod>2020-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.yzchen.tw/posts/airspeed/</loc>

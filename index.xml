@@ -80,6 +80,19 @@
 </description>
         </item>
         <item>
+        <title>iframe Test</title>
+        <link>https://blog.yzchen.tw/posts/iframetest/</link>
+        <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.yzchen.tw/posts/iframetest/</guid>
+        <description>&lt;p&gt;AAAAA&lt;/p&gt;
+&lt;p&gt;保持平常心看起來似乎很簡單，應該是與生俱來的能力－就跟我們在嬰兒時期一樣。但隨著我們逐漸長大、逐漸社會化，我們的腦袋開始湧入各種情緒，同時也會接觸到不同也更複雜的人、事、物，保持平常心似乎變得越來越困難。&lt;/p&gt;
+&lt;p&gt;在楊老師的演講當中有提到，很容易入睡的人的祕密是什麼，就是什麼也不做、自然而然的就睡著了，我們其實都有體會過這種感覺，就是在嬰兒的時候，應該沒有嬰兒在失眠的吧！&lt;/p&gt;
+&lt;p&gt;因此，如何「歸真」是我們能努力的部分。如何能做到不受過多的情緒侵擾、以自己的身心健康為重，學習莊子前的我習慣將生活中大小事依照重要度排序，下禮拜deadline的案子排第一、跟老師開會要準備的東西排第二，什麼運動、吃三餐根本不在排行榜上。現在我反而會回過頭來，將運動、好好睡覺等有助於心身健康的行為排在最前面。&lt;/p&gt;
+&lt;p&gt;不過因為以前不良習慣的累積加上莊子的實踐並沒有這麼容易，因此希望透過在身理上與心理上雙管齊下，能夠幫助我建立起一個好的睡眠調整機制。&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://prickle-telescope-eba.notion.site/Toeic-S-W-65343e730716474b936bd8ecd816f0d2&#34;&gt;&lt;/iframe&gt;</description>
+        </item>
+        <item>
         <title>Type of Airspeed 空速的種類</title>
         <link>https://blog.yzchen.tw/posts/airspeed/</link>
         <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
@@ -321,7 +334,7 @@ $$&lt;/p&gt;
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
         
         <guid>https://blog.yzchen.tw/posts/codeserver/</guid>
-        <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+        <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;br /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;code-server-與-ipados-多一個買ipad的理由&#34;&gt;code server 與 iPadOS: 多一個買iPad的理由&lt;/h1&gt;
 &lt;p&gt;最近在找iPad Pro能夠發揮生產力的場景，於是就想到了code server&lt;/p&gt;
 &lt;h2 id=&#34;我用的環境&#34;&gt;我用的環境&lt;/h2&gt;
@@ -545,8 +558,8 @@ $$&lt;/p&gt;
         <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
         
         <guid>https://blog.yzchen.tw/posts/metar/</guid>
-        <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;METAR的中文是航空氣象電碼，跟許多航空術語一樣(像是Mayday)原文來自法文 &lt;code&gt;message d&#39;observation météorologique régulière pour l&#39;aviation&lt;/code&gt;，取第一個字組成METAR。 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+        <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;METAR的中文是航空氣象電碼，跟許多航空術語一樣(像是Mayday)原文來自法文 &lt;code&gt;message d&#39;observation météorologique régulière pour l&#39;aviation&lt;/code&gt;，取第一個字組成METAR。 &lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;在美國聯邦航空局和美國國家氣象局將 METAR 在英語的角度看成為&lt;code&gt;METeorological Aerodrome Report&lt;/code&gt;，這也視作 METAR 名稱的由來。&lt;/p&gt;
 &lt;h2 id=&#34;簡介-introduction&#34;&gt;簡介 Introduction&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -850,7 +863,7 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;電碼解釋-code-explanation&#34;&gt;電碼解釋 Code Explanation&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;wx&#34;&gt;METAR WX codes&lt;/h3&gt;
 &lt;p&gt;在METAR當中的天氣區域 (WX section)會使用氣象代碼的縮寫 (Abbreviation)做為表示方式。這些縮寫是由WMO (&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/World_Meteorological_Organization&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;World Meteorological Organization&lt;/a&gt;)所定義，在METAR有使用的氣象縮寫中，分為以下幾種：&lt;/p&gt;
 &lt;ul&gt;
@@ -870,7 +883,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#time&#34; &gt;時間 (Time)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;intensity&#34;&gt;修飾詞 Intensity&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -898,7 +911,7 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;descriptor&#34;&gt;天氣現象特性 Descriptor&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -960,7 +973,7 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;precipitation&#34;&gt;降水類型 Precipitation&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1027,7 +1040,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;obscuration&#34;&gt;視障類型 Obscuration&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1082,7 +1095,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;other&#34;&gt;其他現象 Other Phenomena&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1125,7 +1138,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;time&#34;&gt;時間 Time&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1163,7 +1176,7 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;cr&#34;&gt;雲況 Cloud Report&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Cloud coverage is reported by the number of &amp;lsquo;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Okta&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;oktas&lt;/a&gt;&amp;rsquo; (eighths) of the sky that is occupied by cloud.&lt;/p&gt;

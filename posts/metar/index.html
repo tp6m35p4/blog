@@ -132,8 +132,8 @@ if (!doNotTrack) {
 </header>
 
     <section class="article-content">
-    <p>介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR<!-- raw HTML omitted --></p>
-<p>METAR的中文是航空氣象電碼，跟許多航空術語一樣(像是Mayday)原文來自法文 <code>message d'observation météorologique régulière pour l'aviation</code>，取第一個字組成METAR。 <!-- raw HTML omitted --></p>
+    <p>介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR<br /></p>
+<p>METAR的中文是航空氣象電碼，跟許多航空術語一樣(像是Mayday)原文來自法文 <code>message d'observation météorologique régulière pour l'aviation</code>，取第一個字組成METAR。 <br /></p>
 <p>在美國聯邦航空局和美國國家氣象局將 METAR 在英語的角度看成為<code>METeorological Aerodrome Report</code>，這也視作 METAR 名稱的由來。</p>
 <h2 id="簡介-introduction">簡介 Introduction</h2>
 <blockquote>
@@ -437,7 +437,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <h2 id="電碼解釋-code-explanation">電碼解釋 Code Explanation</h2>
-<!-- raw HTML omitted -->
+<h3 id="wx">METAR WX codes</h3>
 <p>在METAR當中的天氣區域 (WX section)會使用氣象代碼的縮寫 (Abbreviation)做為表示方式。這些縮寫是由WMO (<a class="link" href="https://en.wikipedia.org/wiki/World_Meteorological_Organization"  target="_blank" rel="noopener"
     >World Meteorological Organization</a>)所定義，在METAR有使用的氣象縮寫中，分為以下幾種：</p>
 <ul>
@@ -457,7 +457,7 @@ if (!doNotTrack) {
 </li>
 <li><a class="link" href="#time" >時間 (Time)</a></li>
 </ul>
-<!-- raw HTML omitted -->
+<h4 id="intensity">修飾詞 Intensity</h4>
 <table>
 <thead>
 <tr>
@@ -485,7 +485,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <hr>
-<!-- raw HTML omitted -->
+<h4 id="descriptor">天氣現象特性 Descriptor</h4>
 <table>
 <thead>
 <tr>
@@ -547,7 +547,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <hr>
-<!-- raw HTML omitted -->
+<h4 id="precipitation">降水類型 Precipitation</h4>
 <table>
 <thead>
 <tr>
@@ -614,7 +614,7 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<!-- raw HTML omitted -->
+<h4 id="obscuration">視障類型 Obscuration</h4>
 <table>
 <thead>
 <tr>
@@ -669,7 +669,7 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<!-- raw HTML omitted -->
+<h4 id="other">其他現象 Other Phenomena</h4>
 <table>
 <thead>
 <tr>
@@ -712,7 +712,7 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<!-- raw HTML omitted -->
+<h4 id="time">時間 Time</h4>
 <table>
 <thead>
 <tr>
@@ -750,7 +750,7 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <hr>
-<!-- raw HTML omitted -->
+<h3 id="cr">雲況 Cloud Report</h3>
 <blockquote>
 <p>Cloud coverage is reported by the number of &lsquo;<a class="link" href="https://en.wikipedia.org/wiki/Okta"  target="_blank" rel="noopener"
     >oktas</a>&rsquo; (eighths) of the sky that is occupied by cloud.</p>
@@ -851,6 +851,29 @@ if (!doNotTrack) {
 
 
     
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
 </article>
 
     <aside class="related-contents--wrapper">
@@ -878,6 +901,18 @@ if (!doNotTrack) {
 
         <div class="article-details">
             <h2 class="article-title">Type of Airspeed 空速的種類</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/iframetest/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iframe Test</h2>
         </div>
     </a>
 </article>

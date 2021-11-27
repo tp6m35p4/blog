@@ -44,6 +44,19 @@
     </item>
     
     <item>
+      <title>iframe Test</title>
+      <link>https://blog.yzchen.tw/posts/iframetest/</link>
+      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.yzchen.tw/posts/iframetest/</guid>
+      <description>AAAAA
+保持平常心看起來似乎很簡單，應該是與生俱來的能力－就跟我們在嬰兒時期一樣。但隨著我們逐漸長大、逐漸社會化，我們的腦袋開始湧入各種情緒，同時也會接觸到不同也更複雜的人、事、物，保持平常心似乎變得越來越困難。
+在楊老師的演講當中有提到，很容易入睡的人的祕密是什麼，就是什麼也不做、自然而然的就睡著了，我們其實都有體會過這種感覺，就是在嬰兒的時候，應該沒有嬰兒在失眠的吧！
+因此，如何「歸真」是我們能努力的部分。如何能做到不受過多的情緒侵擾、以自己的身心健康為重，學習莊子前的我習慣將生活中大小事依照重要度排序，下禮拜deadline的案子排第一、跟老師開會要準備的東西排第二，什麼運動、吃三餐根本不在排行榜上。現在我反而會回過頭來，將運動、好好睡覺等有助於心身健康的行為排在最前面。
+不過因為以前不良習慣的累積加上莊子的實踐並沒有這麼容易，因此希望透過在身理上與心理上雙管齊下，能夠幫助我建立起一個好的睡眠調整機制。</description>
+    </item>
+    
+    <item>
       <title>Type of Airspeed 空速的種類</title>
       <link>https://blog.yzchen.tw/posts/airspeed/</link>
       <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
@@ -79,7 +92,7 @@ $$
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.yzchen.tw/posts/codeserver/</guid>
-      <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;在iPadOS上用VS Code吧！&lt;br /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -97,7 +110,7 @@ $$
       <pubDate>Sun, 30 Jun 2019 11:35:54 +0800</pubDate>
       
       <guid>https://blog.yzchen.tw/posts/metar/</guid>
-      <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;介紹MEATR為什麼存在、當中包含的內容以及如何讀懂METAR&lt;br /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

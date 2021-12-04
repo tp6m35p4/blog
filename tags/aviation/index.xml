@@ -6,18 +6,29 @@
     <description>Recent content in Aviation on 白白的飛行箱</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 25 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/aviation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.yzchen.tw/tags/aviation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>iframe Test</title>
-      <link>https://blog.yzchen.tw/posts/iframetest/</link>
-      <pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate>
+      <title>VAPEX 飛行日誌 - How and when to flare?</title>
+      <link>https://blog.yzchen.tw/posts/flare/</link>
+      <pubDate>Sat, 04 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.yzchen.tw/posts/iframetest/</guid>
-      <description>AAAAA
-保持平常心看起來似乎很簡單，應該是與生俱來的能力－就跟我們在嬰兒時期一樣。但隨著我們逐漸長大、逐漸社會化，我們的腦袋開始湧入各種情緒，同時也會接觸到不同也更複雜的人、事、物，保持平常心似乎變得越來越困難。
-在楊老師的演講當中有提到，很容易入睡的人的祕密是什麼，就是什麼也不做、自然而然的就睡著了，我們其實都有體會過這種感覺，就是在嬰兒的時候，應該沒有嬰兒在失眠的吧！
-因此，如何「歸真」是我們能努力的部分。如何能做到不受過多的情緒侵擾、以自己的身心健康為重，學習莊子前的我習慣將生活中大小事依照重要度排序，下禮拜deadline的案子排第一、跟老師開會要準備的東西排第二，什麼運動、吃三餐根本不在排行榜上。現在我反而會回過頭來，將運動、好好睡覺等有助於心身健康的行為排在最前面。
-不過因為以前不良習慣的累積加上莊子的實踐並沒有這麼容易，因此希望透過在身理上與心理上雙管齊下，能夠幫助我建立起一個好的睡眠調整機制。</description>
+      <guid>https://blog.yzchen.tw/posts/flare/</guid>
+      <description>最近在教學生落地（landing）跟最終進近（final approach），發現最多人抓不到訣竅的就是平飄（flare）的時機，所以來寫一篇。
+什麼是平飄（flare）？ 平飄是在最終進近跟觸地（touchdown）之間的過渡，在ICAO的定義中屬於落地階段。一般來說落地階段可以被分成四個部分：
+ 最終進近（Final approach） 平飄（Flare） 觸地（Touchdown） 落地滾行與減速（Roll out and deceleration）  當中，平飄的作用是降低觸地速度與下降率（rate of desect），讓飛機盡可能滑順的降落在跑道上。
+在平飄前，我們會將油門收至慢車（idle），來降低飛機的速度。在平飄的時候，我們會抬起機頭增加攻角讓飛機保持平飛，這時，因為增加攻角的同時除了會讓飛機的下降率減緩外，還會增加阻力，再加上我們已將油門收至慢車，所以同時會讓飛機的速度減小，這時因為飛機的速度減小，又會減少升力的產生，所以我們又須將機頭拉更高。此外，還有翼地效應（ground effect）會介入，要考慮的因素非常多。我把平飄的過程畫成下面的流程圖會比較容易理解。
+平飄流程圖
+什麼是好的平飄？  The touchdown is the gentle settling of the airplane onto the landing surface.
+ 我們希望在觸地時盡可能的柔順，最好的落地是在觸地的時候下降率正好為0，但這個基本上不可能，因此退而求其次，希望在觸地的時候下降率越少越少。
+觸地最好的方法是讓飛機自己慢慢的「沉」到跑道上，因此，好的平飄是盡可能地做到在接近地面時正好將下降率變成0，最後讓飛機因為速度的降低慢慢失去升力而慢慢「沉」到跑道上。
+好的平飄應該長這樣
+開始平飄的時機？ 開始平飄最好的時機點在距離跑道10呎高的時候，這時候距離觸地大約還有10秒鐘的時間。那在降落階段如何判斷目前飛機的高度呢？有經驗的飛行員可以透過外圍的景色來判斷飛機的高度以及平飄的時機，但除了這個辦法，其實還有其他輔助方式來幫助我們判斷平飄的時機。
+Runway Expansion Effect 在講如何判斷什麼時候開始平飄前，要先了解什麼是 runway expansion effect，它是指「跑道寬度佔我們整個視野的比率」的變化率。跑道的寬度以及形狀在整個降落階段都扮演著重要目視參考的腳色。
+不同進近階段跑道的形狀
+上圖是表示了在不同進場階段時跑道的形狀，在練習進場的時候我們通常會參考跑道的形狀，如果跑道形狀（上下寬度的比例）維持不變的話，代表我們正處於穩定的下降角度上（不一定是正確的下降率）。如果想知道我們是不是處在正確的下降角度上的話，也可以透過觀察跑道形狀的不同，來確認我們是否處在正確的下降角度上（如下圖所示）。
+![不同下降角度與不同的跑道形狀]](8-11.png)
+現在我們知道可以透過觀察跑道形狀來保持正確的下降角度，那這個跟平飄有什麼關係呢？這時候我們就要來討論 runway expansion rate 了。
+在我們下降的過程當中，如圖8-10所示，跑道在我們視野內佔的寬度會逐漸增加，它增加的速率就是 runway expansion rate，這個 runway expansion rate 並不是線性的，它會根據飛機和跑道的相對高度改變。</description>
     </item>
     
     <item>
